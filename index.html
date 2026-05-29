@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Engineer Career Blueprint 2026 — India to Global Remote</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #07090D;
+  --bg1: #0C0F16;
+  --bg2: #111520;
+  --bg3: #161B28;
+  --border: rgba(255,255,255,0.06);
+  --border2: rgba(255,255,255,0.10);
+  --amber: #F59E0B;
+  --amber-dim: rgba(245,158,11,0.12);
+  --amber-glow: rgba(245,158,11,0.25);
+  --green: #10B981;
+  --green-dim: rgba(16,185,129,0.10);
+  --blue: #3B82F6;
+  --blue-dim: rgba(59,130,246,0.10);
+  --indigo: #818CF8;
+  --indigo-dim: rgba(129,140,248,0.10);
+  --red: #F87171;
+  --red-dim: rgba(248,113,113,0.10);
+  --cyan: #22D3EE;
+  --cyan-dim: rgba(34,211,238,0.10);
+  --text: #E2E8F0;
+  --text2: #94A3B8;
+  --text3: #64748B;
+  --font: 'Sora', sans-serif;
+  --mono: 'IBM Plex Mono', monospace;
+  --serif: 'Lora', serif;
+  --sidebar-w: 260px;
+  --r: 10px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.65;min-height:100vh;overflow-x:hidden}
+
+/* ── SIDEBAR ── */
+#sidebar {
+  position:fixed;top:0;left:0;width:var(--sidebar-w);height:100vh;
+  background:var(--bg1);border-right:1px solid var(--border);
+  overflow-y:auto;z-index:100;padding:1.5rem 0;
+  scrollbar-width:thin;scrollbar-color:var(--bg3) transparent;
+}
+#sidebar::-webkit-scrollbar{width:4px}
+#sidebar::-webkit-scrollbar-thumb{background:var(--bg3)}
+.sidebar-logo {
+  display:flex;align-items:center;gap:0.6rem;padding:0 1.5rem 1.5rem;
+  border-bottom:1px solid var(--border);margin-bottom:1rem;
+}
+.sidebar-logo .dot {
+  width:32px;height:32px;border-radius:8px;
+  background:var(--amber);display:flex;align-items:center;justify-content:center;
+  font-size:0.9rem;font-weight:700;color:#000;flex-shrink:0;
+}
+.sidebar-logo span{font-size:0.82rem;font-weight:600;color:var(--text2);line-height:1.3}
+.nav-group-label {
+  font-family:var(--mono);font-size:0.65rem;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--text3);padding:1rem 1.5rem 0.4rem;
+}
+.nav-link {
+  display:block;padding:0.5rem 1.5rem;font-size:0.82rem;font-weight:500;
+  color:var(--text3);text-decoration:none;border-left:2px solid transparent;
+  transition:all 0.2s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.nav-link:hover{color:var(--text);background:rgba(255,255,255,0.03)}
+.nav-link.active{color:var(--amber);border-left-color:var(--amber);background:var(--amber-dim)}
+
+/* ── MAIN CONTENT ── */
+#main{margin-left:var(--sidebar-w);min-height:100vh}
+
+/* ── HERO ── */
+.hero {
+  padding:5rem 4rem 4rem;
+  background:linear-gradient(160deg,#0C101A 0%,var(--bg) 50%);
+  border-bottom:1px solid var(--border);
+  position:relative;overflow:hidden;
+}
+.hero::before {
+  content:'';position:absolute;top:-80px;right:-80px;
+  width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(245,158,11,0.06) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-eyebrow {
+  font-family:var(--mono);font-size:0.75rem;letter-spacing:0.15em;
+  color:var(--amber);text-transform:uppercase;margin-bottom:1.2rem;
+  display:flex;align-items:center;gap:0.6rem;
+}
+.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--amber)}
+.hero h1 {
+  font-size:clamp(2.2rem,4vw,3.4rem);font-weight:800;line-height:1.1;
+  letter-spacing:-0.03em;margin-bottom:1.5rem;max-width:720px;
+}
+.hero h1 em{font-style:italic;font-family:var(--serif);color:var(--amber)}
+.hero-sub {
+  font-size:1.05rem;color:var(--text2);max-width:600px;
+  line-height:1.7;margin-bottom:2.5rem;
+}
+.hero-tags{display:flex;flex-wrap:wrap;gap:0.6rem}
+.hero-tag {
+  font-family:var(--mono);font-size:0.72rem;padding:0.3rem 0.8rem;
+  border-radius:4px;border:1px solid var(--border2);color:var(--text3);
+  background:var(--bg2);
+}
+.hero-stats {
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  margin-top:3.5rem;background:var(--border);border:1px solid var(--border);
+  border-radius:var(--r);overflow:hidden;
+}
+.hero-stat {
+  background:var(--bg1);padding:1.4rem 1.5rem;
+}
+.hero-stat .val {
+  font-size:1.8rem;font-weight:700;color:var(--text);
+  letter-spacing:-0.02em;margin-bottom:0.2rem;
+  font-variant-numeric:tabular-nums;
+}
+.hero-stat .val span{color:var(--amber)}
+.hero-stat .lbl {font-size:0.78rem;color:var(--text3);font-weight:500}
+
+/* ── SECTIONS ── */
+section {
+  padding:4rem;border-bottom:1px solid var(--border);
+  max-width:1000px;
+}
+section:last-child{border-bottom:none}
+.section-eyebrow {
+  font-family:var(--mono);font-size:0.68rem;letter-spacing:0.14em;
+  text-transform:uppercase;color:var(--amber);margin-bottom:0.8rem;
+  display:flex;align-items:center;gap:0.6rem;
+}
+.section-eyebrow::before{content:'';width:16px;height:1px;background:var(--amber)}
+section h2 {
+  font-size:1.9rem;font-weight:700;letter-spacing:-0.025em;
+  margin-bottom:0.6rem;line-height:1.15;
+}
+.section-lead {
+  color:var(--text2);font-size:1rem;line-height:1.7;
+  margin-bottom:2.5rem;max-width:680px;
+}
+
+/* ── CARDS ── */
+.card {
+  background:var(--bg1);border:1px solid var(--border);
+  border-radius:var(--r);padding:1.5rem;
+}
+.card-grid {
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:1rem;
+}
+.card h3{font-size:1rem;font-weight:600;margin-bottom:0.5rem}
+.card p,.card li{font-size:0.88rem;color:var(--text2);line-height:1.6}
+.card ul{padding-left:1.1rem}
+.card li{margin-bottom:0.25rem}
+
+/* ── PHASE CARDS ── */
+.phase-block {
+  border:1px solid var(--border);border-radius:var(--r);
+  overflow:hidden;margin-bottom:1.5rem;
+}
+.phase-head {
+  background:var(--bg2);padding:1.2rem 1.5rem;
+  display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid var(--border);
+}
+.phase-head h3{font-size:1rem;font-weight:600}
+.phase-body{padding:1.5rem}
+.phase-body p{font-size:0.88rem;color:var(--text2);line-height:1.6;margin-bottom:1rem}
+
+/* ── BADGES ── */
+.badge {
+  display:inline-flex;align-items:center;gap:0.35rem;
+  font-family:var(--mono);font-size:0.68rem;font-weight:500;
+  padding:0.2rem 0.65rem;border-radius:4px;letter-spacing:0.03em;
+}
+.badge-amber{background:var(--amber-dim);color:var(--amber);border:1px solid rgba(245,158,11,0.25)}
+.badge-green{background:var(--green-dim);color:var(--green);border:1px solid rgba(16,185,129,0.25)}
+.badge-blue{background:var(--blue-dim);color:#60A5FA;border:1px solid rgba(59,130,246,0.25)}
+.badge-indigo{background:var(--indigo-dim);color:var(--indigo);border:1px solid rgba(129,140,248,0.25)}
+.badge-red{background:var(--red-dim);color:var(--red);border:1px solid rgba(248,113,113,0.25)}
+.badge-cyan{background:var(--cyan-dim);color:var(--cyan);border:1px solid rgba(34,211,238,0.25)}
+
+/* ── TABLES ── */
+.table-wrap{overflow-x:auto;border-radius:var(--r);border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;font-size:0.85rem}
+thead tr{background:var(--bg2)}
+th{padding:0.75rem 1rem;text-align:left;font-weight:600;color:var(--text2);
+   font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;
+   border-bottom:1px solid var(--border)}
+td{padding:0.75rem 1rem;border-bottom:1px solid var(--border);color:var(--text2);vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(255,255,255,0.015)}
+td strong{color:var(--text);font-weight:600}
+td code {
+  font-family:var(--mono);font-size:0.78rem;background:var(--bg3);
+  padding:0.1rem 0.4rem;border-radius:3px;color:var(--cyan);
+}
+
+/* ── TIMELINE ── */
+.timeline{position:relative;padding-left:2rem}
+.timeline::before {
+  content:'';position:absolute;left:0;top:0;bottom:0;
+  width:1px;background:linear-gradient(to bottom,var(--amber),var(--green),var(--blue),transparent);
+}
+.timeline-item{position:relative;padding-bottom:2.5rem}
+.timeline-item:last-child{padding-bottom:0}
+.tl-dot {
+  position:absolute;left:-2.45rem;top:0.3rem;
+  width:14px;height:14px;border-radius:50%;
+  border:2px solid var(--bg);
+  flex-shrink:0;
+}
+.tl-dot.amber{background:var(--amber);box-shadow:0 0 10px var(--amber-glow)}
+.tl-dot.green{background:var(--green);box-shadow:0 0 10px rgba(16,185,129,0.35)}
+.tl-dot.blue{background:var(--blue);box-shadow:0 0 10px rgba(59,130,246,0.35)}
+.tl-dot.indigo{background:var(--indigo);box-shadow:0 0 10px rgba(129,140,248,0.35)}
+.tl-dot.cyan{background:var(--cyan);box-shadow:0 0 10px rgba(34,211,238,0.35)}
+.tl-dot.red{background:var(--red)}
+.tl-label{font-family:var(--mono);font-size:0.7rem;color:var(--text3);letter-spacing:0.08em;margin-bottom:0.3rem}
+.tl-title{font-size:1rem;font-weight:600;margin-bottom:0.5rem}
+.tl-body{font-size:0.87rem;color:var(--text2);line-height:1.65}
+.tl-deliverables {
+  margin-top:0.8rem;display:flex;flex-wrap:wrap;gap:0.4rem;
+}
+
+/* ── CHECKLIST ── */
+.checklist{list-style:none}
+.checklist li {
+  display:flex;align-items:flex-start;gap:0.75rem;
+  padding:0.6rem 0;border-bottom:1px solid var(--border);
+  font-size:0.87rem;color:var(--text2);
+}
+.checklist li:last-child{border-bottom:none}
+.checklist li::before {
+  content:'';width:16px;height:16px;border-radius:4px;
+  border:1.5px solid var(--text3);flex-shrink:0;margin-top:2px;
+}
+.checklist.green li::before{border-color:var(--green);background:var(--green-dim)}
+.checklist.amber li::before{border-color:var(--amber);background:var(--amber-dim)}
+
+/* ── CALLOUTS ── */
+.callout {
+  border-radius:var(--r);padding:1.2rem 1.5rem;margin-bottom:1.2rem;
+  border-left:3px solid;font-size:0.88rem;line-height:1.65;
+}
+.callout strong{display:block;margin-bottom:0.3rem;font-size:0.82rem;letter-spacing:0.05em;text-transform:uppercase}
+.callout-amber{background:var(--amber-dim);border-color:var(--amber);color:#FDE68A}
+.callout-amber strong{color:var(--amber)}
+.callout-red{background:var(--red-dim);border-color:var(--red);color:#FECACA}
+.callout-red strong{color:var(--red)}
+.callout-green{background:var(--green-dim);border-color:var(--green);color:#A7F3D0}
+.callout-green strong{color:var(--green)}
+.callout-blue{background:var(--blue-dim);border-color:var(--blue);color:#BFDBFE}
+.callout-blue strong{color:#60A5FA}
+
+/* ── STACK GRID ── */
+.stack-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.6rem}
+.stack-item {
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:8px;padding:0.9rem 1rem;
+  display:flex;align-items:flex-start;gap:0.75rem;
+}
+.stack-item .si-icon{font-size:1.2rem;flex-shrink:0}
+.stack-item .si-name{font-size:0.85rem;font-weight:600;margin-bottom:0.1rem}
+.stack-item .si-sub{font-size:0.75rem;color:var(--text3)}
+
+/* ── IGNORE LIST ── */
+.ignore-item {
+  display:flex;align-items:flex-start;gap:1rem;
+  padding:0.9rem 1rem;border-radius:8px;
+  background:var(--bg1);border:1px solid var(--border);
+  margin-bottom:0.6rem;font-size:0.87rem;
+}
+.ignore-item .ig-x{
+  color:var(--red);font-weight:700;font-size:1rem;flex-shrink:0;margin-top:1px;
+}
+.ignore-item .ig-text strong{color:var(--text);display:block;margin-bottom:0.2rem}
+.ignore-item .ig-text span{color:var(--text3)}
+
+/* ── PROJECT CARDS ── */
+.project-card {
+  border:1px solid var(--border);border-radius:var(--r);
+  padding:1.5rem;margin-bottom:1rem;
+  transition:border-color 0.2s;position:relative;overflow:hidden;
+}
+.project-card::before {
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+}
+.project-card.beginner::before{background:var(--green)}
+.project-card.intermediate::before{background:var(--blue)}
+.project-card.advanced::before{background:var(--amber)}
+.project-card.elite::before{background:linear-gradient(90deg,var(--amber),var(--indigo))}
+.project-card:hover{border-color:var(--border2)}
+.project-card .proj-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:0.75rem}
+.project-card h3{font-size:1rem;font-weight:600;line-height:1.3}
+.project-card .proj-desc{font-size:0.87rem;color:var(--text2);line-height:1.65;margin-bottom:0.75rem}
+.proj-tags{display:flex;flex-wrap:wrap;gap:0.4rem}
+.proj-tag{font-family:var(--mono);font-size:0.67rem;padding:0.15rem 0.55rem;border-radius:3px;background:var(--bg3);color:var(--text3);border:1px solid var(--border)}
+.proj-wow{
+  margin-top:0.75rem;padding:0.6rem 0.9rem;
+  background:var(--amber-dim);border-radius:6px;
+  font-size:0.8rem;color:#FDE68A;border:1px solid rgba(245,158,11,0.2);
+}
+.proj-wow::before{content:'★ WOW FACTOR: ';font-family:var(--mono);font-size:0.68rem;letter-spacing:0.06em;color:var(--amber)}
+
+/* ── CODE BLOCK ── */
+.code-block {
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:8px;padding:1.2rem;overflow-x:auto;
+  font-family:var(--mono);font-size:0.8rem;color:#94A3B8;
+  line-height:1.7;margin:1rem 0;
+}
+.code-block .kw{color:#818CF8}
+.code-block .str{color:#34D399}
+.code-block .cm{color:#475569}
+
+/* ── TWO COL ── */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.two-col .card h4{font-size:0.88rem;font-weight:600;color:var(--green);margin-bottom:0.5rem;letter-spacing:0.05em;text-transform:uppercase}
+.two-col .card.neg h4{color:var(--red)}
+
+/* ── SALARY TABLE ── */
+.salary-tier {
+  background:var(--bg1);border:1px solid var(--border);
+  border-radius:var(--r);padding:1.2rem 1.5rem;margin-bottom:0.8rem;
+  display:grid;grid-template-columns:1fr auto;align-items:center;gap:1rem;
+}
+.salary-tier h4{font-size:0.9rem;font-weight:600;margin-bottom:0.2rem}
+.salary-tier p{font-size:0.8rem;color:var(--text3)}
+.salary-tier .sal{font-family:var(--mono);font-size:1.1rem;font-weight:600;color:var(--green);white-space:nowrap}
+.salary-tier .sal span{font-size:0.7rem;color:var(--text3);display:block;text-align:right;margin-top:0.1rem}
+
+/* ── WEEK SCHEDULE ── */
+.week-grid {
+  display:grid;grid-template-columns:repeat(7,1fr);gap:1px;
+  background:var(--border);border:1px solid var(--border);
+  border-radius:var(--r);overflow:hidden;
+}
+.week-day{background:var(--bg1);padding:1rem;text-align:center}
+.week-day .day-name{font-family:var(--mono);font-size:0.7rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.6rem}
+.week-day .day-block{font-size:0.75rem;color:var(--text2);margin-bottom:0.3rem;padding:0.3rem;border-radius:4px;line-height:1.3}
+.week-day .db-learn{background:rgba(59,130,246,0.12);color:#93C5FD}
+.week-day .db-project{background:rgba(16,185,129,0.12);color:#6EE7B7}
+.week-day .db-review{background:rgba(245,158,11,0.12);color:#FCD34D}
+.week-day .db-rest{background:rgba(255,255,255,0.03);color:var(--text3)}
+.week-day.weekend{background:rgba(255,255,255,0.01)}
+
+/* ── GITHUB SECTION ── */
+.github-repo {
+  border:1px solid var(--border);border-radius:8px;padding:1rem 1.2rem;
+  margin-bottom:0.6rem;display:flex;align-items:flex-start;gap:1rem;
+}
+.repo-num{
+  font-family:var(--mono);font-size:0.7rem;color:var(--amber);
+  background:var(--amber-dim);width:24px;height:24px;border-radius:4px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:600;
+}
+.repo-name{font-size:0.9rem;font-weight:600;margin-bottom:0.2rem}
+.repo-desc{font-size:0.8rem;color:var(--text3);margin-bottom:0.4rem}
+
+/* ── INTERVIEW Q ── */
+.interview-q {
+  border:1px solid var(--border);border-radius:8px;
+  overflow:hidden;margin-bottom:0.7rem;
+}
+.iq-question{
+  padding:0.9rem 1.2rem;background:var(--bg2);
+  font-size:0.88rem;font-weight:500;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.iq-question::after{content:'▸';color:var(--text3);font-size:0.75rem;transition:transform 0.2s}
+.interview-q.open .iq-question::after{transform:rotate(90deg)}
+.iq-answer{
+  padding:0 1.2rem;max-height:0;overflow:hidden;
+  transition:max-height 0.3s ease,padding 0.3s ease;
+}
+.interview-q.open .iq-answer{max-height:500px;padding:1rem 1.2rem}
+.iq-answer p{font-size:0.85rem;color:var(--text2);line-height:1.65}
+
+/* ── SEPARATOR ── */
+.sep{height:1px;background:linear-gradient(to right,transparent,var(--border2),transparent);margin:2rem 0}
+
+/* ── MISTAKES ── */
+.mistake-item {
+  display:flex;gap:1rem;padding:1rem 1.2rem;
+  border:1px solid var(--border);border-radius:8px;
+  margin-bottom:0.7rem;background:var(--bg1);
+}
+.mistake-num{
+  font-family:var(--mono);font-size:0.75rem;font-weight:600;
+  color:var(--red);background:var(--red-dim);
+  min-width:28px;height:28px;border-radius:4px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.mistake-title{font-size:0.9rem;font-weight:600;margin-bottom:0.2rem}
+.mistake-body{font-size:0.83rem;color:var(--text3);line-height:1.55}
+
+/* ── STANDOUT ── */
+.standout-item {
+  display:flex;gap:1rem;padding:1rem 1.2rem;
+  border:1px solid var(--border);border-radius:8px;
+  margin-bottom:0.7rem;background:var(--bg1);
+}
+.standout-num{
+  font-family:var(--mono);font-size:0.75rem;font-weight:600;
+  color:var(--amber);background:var(--amber-dim);
+  min-width:28px;height:28px;border-radius:4px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.standout-title{font-size:0.9rem;font-weight:600;margin-bottom:0.2rem}
+.standout-body{font-size:0.83rem;color:var(--text3);line-height:1.55}
+
+/* ── FOOTER ── */
+footer {
+  margin-left:var(--sidebar-w);padding:2rem 4rem;
+  border-top:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+}
+footer p{font-size:0.8rem;color:var(--text3)}
+
+/* ── SCROLL INDICATOR ── */
+#scroll-progress {
+  position:fixed;top:0;left:var(--sidebar-w);right:0;height:2px;
+  background:linear-gradient(90deg,var(--amber),var(--green));
+  transform-origin:left;transform:scaleX(0);z-index:200;
+  transition:transform 0.1s;
+}
+
+/* ── MOBILE ── */
+@media(max-width:900px){
+  #sidebar{display:none}
+  #main{margin-left:0}
+  footer{margin-left:0}
+  section{padding:2.5rem 1.5rem}
+  .hero{padding:3rem 1.5rem 2rem}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .two-col{grid-template-columns:1fr}
+  .week-grid{grid-template-columns:repeat(4,1fr)}
+  #scroll-progress{left:0}
+}
+
+/* ── PRINT ── */
+@media print{
+  #sidebar,#scroll-progress{display:none}
+  #main{margin-left:0}
+  section{padding:2rem 0}
+  .hero{padding:2rem 0}
+}
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<!-- SIDEBAR NAV -->
+<nav id="sidebar">
+  <div class="sidebar-logo">
+    <div class="dot">AI</div>
+    <span>Engineer Career<br>Blueprint 2026</span>
+  </div>
+
+  <div class="nav-group-label">Overview</div>
+  <a class="nav-link active" href="#hero">Start Here</a>
+  <a class="nav-link" href="#reality">Reality Check</a>
+
+  <div class="nav-group-label">Execution Plan</div>
+  <a class="nav-link" href="#phases">Skill Phases</a>
+  <a class="nav-link" href="#schedule">Daily Structure</a>
+  <a class="nav-link" href="#projects">Project Roadmap</a>
+  <a class="nav-link" href="#timeline">24-Week Timeline</a>
+
+  <div class="nav-group-label">Technical Mastery</div>
+  <a class="nav-link" href="#techstack">Tech Stack</a>
+  <a class="nav-link" href="#ignore">What to Ignore</a>
+  <a class="nav-link" href="#sysdesign">System Design Prep</a>
+  <a class="nav-link" href="#dsa">DSA Expectations</a>
+  <a class="nav-link" href="#interviews">Interview Prep</a>
+
+  <div class="nav-group-label">Portfolio & Brand</div>
+  <a class="nav-link" href="#github">GitHub Strategy</a>
+  <a class="nav-link" href="#resume">Resume Strategy</a>
+  <a class="nav-link" href="#linkedin">LinkedIn Strategy</a>
+  <a class="nav-link" href="#opensource">Open-Source</a>
+  <a class="nav-link" href="#branding">Personal Brand</a>
+
+  <div class="nav-group-label">Income Strategy</div>
+  <a class="nav-link" href="#freelance">Freelancing</a>
+  <a class="nav-link" href="#salary">Salary Strategy</a>
+  <a class="nav-link" href="#remote">Remote Job Strategy</a>
+
+  <div class="nav-group-label">What Wins Offers</div>
+  <a class="nav-link" href="#standout">How to Stand Out</a>
+  <a class="nav-link" href="#mistakes">Rejection Mistakes</a>
+  <a class="nav-link" href="#hiringmgr">Hiring Manager POV</a>
+  <a class="nav-link" href="#hardtoreject">Hard to Reject</a>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div id="main">
+
+<!-- ══════════════════════════════════════ HERO ══════════════════════════════════════ -->
+<div class="hero" id="hero">
+  <div class="hero-eyebrow">India → Global Remote · AI Engineering · 2026 Edition</div>
+  <h1>The <em>Complete</em> AI Engineer Career Blueprint</h1>
+  <p class="hero-sub">A principal-engineer-designed system for going from competent developer to globally hireable AI engineer. No tutorials. No fluff. Only what actually gets you hired at $80k–$180k+ remote.</p>
+  <div class="hero-tags">
+    <span class="hero-tag">LLM Engineering</span>
+    <span class="hero-tag">RAG Pipelines</span>
+    <span class="hero-tag">AI Agents</span>
+    <span class="hero-tag">Production Systems</span>
+    <span class="hero-tag">FastAPI</span>
+    <span class="hero-tag">pgvector</span>
+    <span class="hero-tag">LangGraph</span>
+    <span class="hero-tag">AWS</span>
+    <span class="hero-tag">Remote-First</span>
+    <span class="hero-tag">India Timezone Compatible</span>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="val">24<span>wk</span></div>
+      <div class="lbl">Complete Timeline</div>
+    </div>
+    <div class="hero-stat">
+      <div class="val">11</div>
+      <div class="lbl">Capstone Projects</div>
+    </div>
+    <div class="hero-stat">
+      <div class="val">$80<span>k+</span></div>
+      <div class="lbl">Realistic Target TC</div>
+    </div>
+    <div class="hero-stat">
+      <div class="val">100%</div>
+      <div class="lbl">Execution-Focused</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ REALITY CHECK ═══════════════════════════════════ -->
+<section id="reality">
+  <div class="section-eyebrow">Before You Begin</div>
+  <h2>The Reality Check</h2>
+  <p class="section-lead">Hiring managers at top companies receive 500–2000 applications per AI engineering role. Here is exactly how they filter, and what bucket you currently fall in.</p>
+
+  <div class="callout callout-amber">
+    <strong>The Core Truth</strong>
+    The market does not reward learning. It rewards demonstrable, shipped, production-quality work. A candidate with 3 real deployed systems beats a candidate with 12 courses every single time.
+  </div>
+
+  <div class="card-grid" style="margin-bottom:1.5rem">
+    <div class="card" style="border-color:rgba(248,113,113,0.2)">
+      <div style="color:var(--red);font-family:var(--mono);font-size:0.7rem;letter-spacing:0.08em;margin-bottom:0.6rem">BUCKET A — 70% of candidates</div>
+      <h3>Tutorial Consumers</h3>
+      <p style="margin-top:0.4rem">Completed 6+ Udemy courses. Can describe RAG. Portfolio is 3 Streamlit clones of YouTube tutorials. GitHub is empty for months. Will not pass any filter. <strong style="color:var(--red)">You do not want to be here.</strong></p>
+    </div>
+    <div class="card" style="border-color:rgba(59,130,246,0.2)">
+      <div style="color:#60A5FA;font-family:var(--mono);font-size:0.7rem;letter-spacing:0.08em;margin-bottom:0.6rem">BUCKET B — 25% of candidates</div>
+      <h3>The Average Builder</h3>
+      <p style="margin-top:0.4rem">Has 2–3 real projects. Can talk about trade-offs. Understands the basics of RAG and agents. Gets past resume screen 40% of the time. Fails system design. Inconsistent GitHub. <strong style="color:#60A5FA">Hireable, but competing on price.</strong></p>
+    </div>
+    <div class="card" style="border-color:rgba(16,185,129,0.2)">
+      <div style="color:var(--green);font-family:var(--mono);font-size:0.7rem;letter-spacing:0.08em;margin-bottom:0.6rem">BUCKET C — 5% of candidates</div>
+      <h3>The Exceptional Engineer</h3>
+      <p style="margin-top:0.4rem">Ships production systems. Thinks in trade-offs, costs, and failure modes. Has public technical credibility. Makes interviewers say "this person is already thinking like a senior." <strong style="color:var(--green)">Gets multiple offers, negotiates from strength.</strong></p>
+    </div>
+  </div>
+
+  <div class="callout callout-blue">
+    <strong>India-Specific Reality</strong>
+    Remote US/EU companies hiring from India care about: (1) communication quality in async written English, (2) timezone overlap — IST works perfectly with EU and overlaps 3–4 hours with US East. (3) Proof that you ship without supervision. Your application competes globally. A sharp GitHub profile and deployed demos eliminate the location bias faster than any other tactic.
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <h4>What Companies Are Actually Hiring For</h4>
+      <ul>
+        <li>Engineers who can build and ship LLM-powered features end-to-end</li>
+        <li>People who understand production failure modes (hallucination, latency, cost explosions)</li>
+        <li>Backend engineers who can integrate AI into existing systems</li>
+        <li>Problem-solvers who default to simple, maintainable solutions</li>
+        <li>Async communicators who write clear technical documents</li>
+      </ul>
+    </div>
+    <div class="card neg">
+      <h4 style="color:var(--red)">What Companies Are NOT Hiring For</h4>
+      <ul>
+        <li>People who completed "the full AI stack" course</li>
+        <li>Prompt engineers with no backend skills</li>
+        <li>Engineers who only know LangChain but not what it does internally</li>
+        <li>Portfolio made up entirely of notebooks and Streamlit apps</li>
+        <li>Candidates who cannot explain a single trade-off they made in a project</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════════════ PHASES ═════════════════════════════════════ -->
+<section id="phases">
+  <div class="section-eyebrow">Skill Progression</div>
+  <h2>6-Phase Mastery System</h2>
+  <p class="section-lead">Each phase has a single, measurable goal. Do not move to the next phase until you can build the capstone project without referring to documentation for the core logic.</p>
+
+  <div class="phase-block">
+    <div class="phase-head">
+      <div>
+        <div style="font-family:var(--mono);font-size:0.7rem;color:var(--green);margin-bottom:0.2rem">PHASE 1 · WEEKS 1–4</div>
+        <h3>Backend & Systems Foundation</h3>
+      </div>
+      <span class="badge badge-green">Required</span>
+    </div>
+    <div class="phase-body">
+      <p>You cannot build AI systems without being a solid backend engineer. Production LLM systems are 80% backend engineering and 20% AI. This phase makes you unbreakable on the engineering side.</p>
+      <div class="stack-grid">
+        <div class="stack-item"><div class="si-icon">🐍</div><div><div class="si-name">Python Advanced</div><div class="si-sub">Asyncio, typing, metaclasses, decorators, context managers</div></div></div>
+        <div class="stack-item"><div class="si-icon">🗄️</div><div><div class="si-name">PostgreSQL Internals</div><div class="si-sub">Indexing, EXPLAIN ANALYZE, asyncpg, Alembic migrations</div></div></div>
+        <div class="stack-item"><div class="si-icon">⚡</div><div><div class="si-name">FastAPI Production</div><div class="si-sub">Auth, middleware, dependency injection, background tasks</div></div></div>
+        <div class="stack-item"><div class="si-icon">🔴</div><div><div class="si-name">Redis</div><div class="si-sub">Caching, pub/sub, rate limiting, session management</div></div></div>
+        <div class="stack-item"><div class="si-icon">🐋</div><div><div class="si-name">Docker</div><div class="si-sub">Multi-stage builds, Compose, health checks, secrets</div></div></div>
+        <div class="stack-item"><div class="si-icon">📦</div><div><div class="si-name">Pydantic v2</div><div class="si-sub">Models, validators, settings management, serialization</div></div></div>
+      </div>
+      <div style="margin-top:1rem"><span class="badge badge-amber">Capstone:</span> <span style="font-size:0.85rem;color:var(--text2);margin-left:0.5rem">Production REST API with async DB, Redis cache, JWT auth, Docker deployment</span></div>
+    </div>
+  </div>
+
+  <div class="phase-block">
+    <div class="phase-head">
+      <div>
+        <div style="font-family:var(--mono);font-size:0.7rem;color:var(--blue);margin-bottom:0.2rem">PHASE 2 · WEEKS 5–8</div>
+        <h3>LLM Engineering & RAG</h3>
+      </div>
+      <span class="badge badge-blue">Core AI</span>
+    </div>
+    <div class="phase-body">
+      <p>Learn LLM APIs from the raw HTTP layer up. Build RAG from scratch — no LlamaIndex — before you use it. You must understand what every abstraction is doing underneath.</p>
+      <div class="stack-grid">
+        <div class="stack-item"><div class="si-icon">🤖</div><div><div class="si-name">LLM APIs</div><div class="si-sub">OpenAI, Anthropic, raw HTTP, streaming, tool-calling, vision</div></div></div>
+        <div class="stack-item"><div class="si-icon">🔢</div><div><div class="si-name">Embeddings</div><div class="si-sub">text-embedding-3-small, sentence-transformers, BPE tokenization</div></div></div>
+        <div class="stack-item"><div class="si-icon">🔍</div><div><div class="si-name">pgvector + Qdrant</div><div class="si-sub">IVFFlat, HNSW, hybrid BM25+vector search, filtering</div></div></div>
+        <div class="stack-item"><div class="si-icon">📄</div><div><div class="si-name">Document Processing</div><div class="si-sub">Chunking strategies, PDF parsing, metadata enrichment</div></div></div>
+        <div class="stack-item"><div class="si-icon">⚙️</div><div><div class="si-name">Prompt Engineering</div><div class="si-sub">System prompts, few-shot, chain-of-thought, structured outputs</div></div></div>
+        <div class="stack-item"><div class="si-icon">📊</div><div><div class="si-name">LLM Evals</div><div class="si-sub">RAGAS metrics, precision/recall, G-Eval, custom test sets</div></div></div>
+      </div>
+      <div style="margin-top:1rem"><span class="badge badge-amber">Capstone:</span> <span style="font-size:0.85rem;color:var(--text2);margin-left:0.5rem">Production RAG API: hybrid search, reranking, context compression, streamed responses, cost per query logged</span></div>
+    </div>
+  </div>
+
+  <div class="phase-block">
+    <div class="phase-head">
+      <div>
+        <div style="font-family:var(--mono);font-size:0.7rem;color:var(--amber);margin-bottom:0.2rem">PHASE 3 · WEEKS 9–12</div>
+        <h3>AI Agents & Orchestration</h3>
+      </div>
+      <span class="badge badge-amber">High Value</span>
+    </div>
+    <div class="phase-body">
+      <p>Agents are the highest-value AI engineering skill in 2026. Build the ReAct loop from scratch first. Only after understanding the raw loop should you use LangGraph.</p>
+      <div class="stack-grid">
+        <div class="stack-item"><div class="si-icon">🔄</div><div><div class="si-name">Agent Loops (Raw)</div><div class="si-sub">ReAct, CoT, tool-parsing, error recovery, max iterations</div></div></div>
+        <div class="stack-item"><div class="si-icon">🕸️</div><div><div class="si-name">LangGraph</div><div class="si-sub">State machines, conditional edges, human-in-the-loop, checkpointing</div></div></div>
+        <div class="stack-item"><div class="si-icon">🔧</div><div><div class="si-name">Tool Design</div><div class="si-sub">JSON Schema, Pydantic tool models, error handling, timeouts</div></div></div>
+        <div class="stack-item"><div class="si-icon">🧠</div><div><div class="si-name">Memory Systems</div><div class="si-sub">Short-term (context window), long-term (vector DB), episodic</div></div></div>
+        <div class="stack-item"><div class="si-icon">👥</div><div><div class="si-name">Multi-Agent</div><div class="si-sub">Supervisor pattern, specialist agents, handoffs, coordination</div></div></div>
+        <div class="stack-item"><div class="si-icon">🔍</div><div><div class="si-name">Observability</div><div class="si-sub">LangSmith tracing, token cost per step, latency profiling</div></div></div>
+      </div>
+      <div style="margin-top:1rem"><span class="badge badge-amber">Capstone:</span> <span style="font-size:0.85rem;color:var(--text2);margin-left:0.5rem">Multi-agent research system: coordinator + researcher + writer + critic, with LangSmith tracing and SSE streaming</span></div>
+    </div>
+  </div>
+
+  <div class="phase-block">
+    <div class="phase-head">
+      <div>
+        <div style="font-family:var(--mono);font-size:0.7rem;color:var(--indigo);margin-bottom:0.2rem">PHASE 4 · WEEKS 13–16</div>
+        <h3>Production Engineering & Cloud</h3>
+      </div>
+      <span class="badge badge-indigo">Differentiator</span>
+    </div>
+    <div class="phase-body">
+      <p>Most AI engineers can't deploy. This phase makes you the rare candidate who ships to production and keeps it running. AWS is the dominant platform for US companies.</p>
+      <div class="stack-grid">
+        <div class="stack-item"><div class="si-icon">☁️</div><div><div class="si-name">AWS Core</div><div class="si-sub">ECS Fargate, Lambda, S3, RDS, ElastiCache, API Gateway, IAM</div></div></div>
+        <div class="stack-item"><div class="si-icon">🔁</div><div><div class="si-name">CI/CD</div><div class="si-sub">GitHub Actions: test → lint → build → push ECR → deploy ECS</div></div></div>
+        <div class="stack-item"><div class="si-icon">📈</div><div><div class="si-name">Monitoring</div><div class="si-sub">CloudWatch, Prometheus basics, Helicone for LLM costs, alerting</div></div></div>
+        <div class="stack-item"><div class="si-icon">🔒</div><div><div class="si-name">Security</div><div class="si-sub">Secrets Manager, least-privilege IAM, env var management, CORS</div></div></div>
+        <div class="stack-item"><div class="si-icon">⚡</div><div><div class="si-name">Performance</div><div class="si-sub">Connection pooling, async queues (Celery/ARQ), caching layers</div></div></div>
+        <div class="stack-item"><div class="si-icon">💰</div><div><div class="si-name">Cost Engineering</div><div class="si-sub">Token cost per request, model routing, caching LLM responses</div></div></div>
+      </div>
+      <div style="margin-top:1rem"><span class="badge badge-amber">Capstone:</span> <span style="font-size:0.85rem;color:var(--text2);margin-left:0.5rem">AI Gateway: multi-provider LLM routing, cost tracking per user, async queue for long tasks, deployed on AWS ECS with full CI/CD</span></div>
+    </div>
+  </div>
+
+  <div class="phase-block">
+    <div class="phase-head">
+      <div>
+        <div style="font-family:var(--mono);font-size:0.7rem;color:var(--cyan);margin-bottom:0.2rem">PHASE 5 · WEEKS 17–20</div>
+        <h3>Elite AI Engineering Skills</h3>
+      </div>
+      <span class="badge badge-cyan">Senior Signal</span>
+    </div>
+    <div class="phase-body">
+      <p>These skills separate $80k candidates from $140k+ candidates. You don't need to be a researcher. You need to be able to fine-tune, evaluate, and serve models confidently.</p>
+      <div class="stack-grid">
+        <div class="stack-item"><div class="si-icon">🎛️</div><div><div class="si-name">Fine-Tuning (LoRA/QLoRA)</div><div class="si-sub">Identify when fine-tuning beats prompting, run PEFT training on HF</div></div></div>
+        <div class="stack-item"><div class="si-icon">🚀</div><div><div class="si-name">Model Serving</div><div class="si-sub">vLLM, Ollama, BentoML, inference optimization (quantization, batching)</div></div></div>
+        <div class="stack-item"><div class="si-icon">📏</div><div><div class="si-name">Evaluation Frameworks</div><div class="si-sub">Build eval harnesses: RAGAS, custom evals, A/B test prompts, regression suites</div></div></div>
+        <div class="stack-item"><div class="si-icon">🏗️</div><div><div class="si-name">AI Product Architecture</div><div class="si-sub">Latency budgets, multi-tier retrieval, context assembly patterns</div></div></div>
+        <div class="stack-item"><div class="si-icon">🛡️</div><div><div class="si-name">LLM Safety & Guardrails</div><div class="si-sub">Input/output validation, topic filtering, jailbreak resistance</div></div></div>
+        <div class="stack-item"><div class="si-icon">📡</div><div><div class="si-name">Streaming Architecture</div><div class="si-sub">SSE, WebSockets, token-by-token UI, partial result handling</div></div></div>
+      </div>
+      <div style="margin-top:1rem"><span class="badge badge-amber">Capstone:</span> <span style="font-size:0.85rem;color:var(--text2);margin-left:0.5rem">Deploy a fine-tuned model (QLoRA) on HuggingFace Spaces with an eval harness showing benchmark vs base model</span></div>
+    </div>
+  </div>
+
+  <div class="phase-block">
+    <div class="phase-head">
+      <div>
+        <div style="font-family:var(--mono);font-size:0.7rem;color:var(--amber);margin-bottom:0.2rem">PHASE 6 · WEEKS 21–24</div>
+        <h3>Job Hunting Execution</h3>
+      </div>
+      <span class="badge badge-amber">Final Sprint</span>
+    </div>
+    <div class="phase-body">
+      <p>Job hunting is a skill. This phase is your full-time job. You are not learning new tech — you are converting everything you built into offers.</p>
+      <div class="stack-grid">
+        <div class="stack-item"><div class="si-icon">📝</div><div><div class="si-name">Resume Polish</div><div class="si-sub">ATS optimization, quantified outcomes, project-led narrative</div></div></div>
+        <div class="stack-item"><div class="si-icon">🌐</div><div><div class="si-name">Application Engine</div><div class="si-sub">15–20 quality applications/week, not 100 spray-and-pray</div></div></div>
+        <div class="stack-item"><div class="si-icon">🧩</div><div><div class="si-name">Interview Reps</div><div class="si-sub">3 mock system design/week, 5 LC Easy-Medium/week, behavioral drills</div></div></div>
+        <div class="stack-item"><div class="si-icon">🤝</div><div><div class="si-name">Warm Outreach</div><div class="si-sub">LinkedIn DMs to engineers at target companies, not recruiters</div></div></div>
+        <div class="stack-item"><div class="si-icon">💬</div><div><div class="si-name">Offer Negotiation</div><div class="si-sub">Competing offer leverage, base vs equity, counter-offer strategy</div></div></div>
+        <div class="stack-item"><div class="si-icon">📊</div><div><div class="si-name">Pipeline Tracking</div><div class="si-sub">Spreadsheet: applied → screen → technical → offer → negotiating</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════ SCHEDULE ════════════════════════════════════ -->
+<section id="schedule">
+  <div class="section-eyebrow">Daily & Weekly Structure</div>
+  <h2>The Learning Engine</h2>
+  <p class="section-lead">Consistency beats intensity. 4 focused hours daily compounds into a dramatically different skill level in 24 weeks. The structure is rigid — the content changes per phase.</p>
+
+  <div class="week-grid" style="margin-bottom:2rem">
+    <div class="week-day"><div class="day-name">Mon</div><div class="day-block db-learn">2h Deep Learning</div><div class="day-block db-project">2h Project Build</div></div>
+    <div class="week-day"><div class="day-name">Tue</div><div class="day-block db-learn">2h Deep Learning</div><div class="day-block db-project">2h Project Build</div></div>
+    <div class="week-day"><div class="day-name">Wed</div><div class="day-block db-review">1h Review+Notes</div><div class="day-block db-project">2h Project Build</div><div class="day-block db-rest" style="font-size:0.7rem">1h DSA practice</div></div>
+    <div class="week-day"><div class="day-name">Thu</div><div class="day-block db-learn">2h Deep Learning</div><div class="day-block db-project">2h Project Build</div></div>
+    <div class="week-day"><div class="day-name">Fri</div><div class="day-block db-learn">1h Learning</div><div class="day-block db-project">2h Project Build</div><div class="day-block db-review">1h Weekly recap</div></div>
+    <div class="week-day weekend"><div class="day-name">Sat</div><div class="day-block db-project">4h Mastery Project</div><div class="day-block db-rest" style="font-size:0.7rem">OSS or writing</div></div>
+    <div class="week-day weekend"><div class="day-name">Sun</div><div class="day-block db-rest">Rest / Light review</div><div class="day-block db-project">2h Planning next wk</div></div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>Deep Learning Block (2h)</h3>
+      <ul style="margin-top:0.5rem">
+        <li>Read documentation, not YouTube</li>
+        <li>Write code from scratch, no copy-paste</li>
+        <li>Break things intentionally to understand errors</li>
+        <li>Keep a "Today I Learned" note per session</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Project Build Block (2h)</h3>
+      <ul style="margin-top:0.5rem">
+        <li>Build one concrete feature per session</li>
+        <li>Commit code daily — even incomplete work</li>
+        <li>Write a 3-line comment on what you built</li>
+        <li>Every project lives on GitHub with a README</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Weekly Mandatory Deliverable</h3>
+      <ul style="margin-top:0.5rem">
+        <li>One GitHub commit every single day</li>
+        <li>One technical concept written in your own words</li>
+        <li>One section of your portfolio project shipped</li>
+        <li>Two DSA problems solved (Wed + anytime)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout callout-amber" style="margin-top:1.5rem">
+    <strong>Non-Negotiable Rule</strong>
+    You are never "learning." You are always building. Every concept you learn must produce a runnable code artifact within 24 hours. If you studied asyncio, you must have a script using it by the next morning.
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ PROJECTS ══════════════════════════════════ -->
+<section id="projects">
+  <div class="section-eyebrow">Project Roadmap</div>
+  <h2>Beginner → Advanced → Elite</h2>
+  <p class="section-lead">11 projects in escalating complexity. Each is designed to solve a real problem, demonstrate production thinking, and impress a senior engineer in a portfolio review.</p>
+
+  <div style="margin-bottom:0.5rem;display:flex;gap:0.5rem;flex-wrap:wrap">
+    <span class="badge badge-green">● Beginner</span>
+    <span class="badge badge-blue">● Intermediate</span>
+    <span class="badge badge-amber">● Advanced</span>
+    <span class="badge" style="background:linear-gradient(90deg,var(--amber-dim),var(--indigo-dim));color:var(--amber);border-color:rgba(245,158,11,0.3)">★ Elite Capstone</span>
+  </div>
+
+  <div style="margin-top:1rem">
+
+    <div class="project-card beginner">
+      <div class="proj-head">
+        <div>
+          <div style="font-family:var(--mono);font-size:0.68rem;color:var(--green);margin-bottom:0.3rem">PROJECT 01 · WEEK 2</div>
+          <h3>Async LLM Chat CLI with Streaming</h3>
+        </div>
+        <span class="badge badge-green">Beginner</span>
+      </div>
+      <p class="proj-desc">A terminal chat client using raw <code>httpx</code> async calls to OpenAI/Anthropic. No SDK wrappers. Handles streaming token-by-token output, conversation history, and cost tracking per session.</p>
+      <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">asyncio</span><span class="proj-tag">httpx</span><span class="proj-tag">streaming</span><span class="proj-tag">OpenAI API</span></div>
+      <div class="proj-wow">Shows you understand the wire protocol, not just the SDK. Interviewers love this.</div>
+    </div>
+
+    <div class="project-card beginner">
+      <div class="proj-head">
+        <div>
+          <div style="font-family:var(--mono);font-size:0.68rem;color:var(--green);margin-bottom:0.3rem">PROJECT 02 · WEEK 3</div>
+          <h3>Production FastAPI Backend with Auth</h3>
+        </div>
+        <span class="badge badge-green">Beginner</span>
+      </div>
+      <p class="proj-desc">A FastAPI application with JWT authentication, PostgreSQL via asyncpg, Redis caching, Pydantic v2 validation, rate limiting middleware, structured logging, health check endpoint, and Docker Compose setup. No AI — pure backend engineering.</p>
+      <div class="proj-tags"><span class="proj-tag">FastAPI</span><span class="proj-tag">PostgreSQL</span><span class="proj-tag">Redis</span><span class="proj-tag">Docker</span><span class="proj-tag">JWT</span><span class="proj-tag">asyncpg</span></div>
+      <div class="proj-wow">This alone proves you're a real backend engineer. Most "AI engineers" cannot build this from scratch.</div>
+    </div>
+
+    <div class="project-card intermediate">
+      <div class="proj-head">
+        <div>
+          <div style="font-family:var(--mono);font-size:0.68rem;color:#60A5FA;margin-bottom:0.3rem">PROJECT 03 · WEEK 5–6</div>
+          <h3>RAG Pipeline from Scratch (No LangChain)</h3>
+        </div>
+        <span class="badge badge-blue">Intermediate</span>
+      </div>
+      <p class="proj-desc">Build a complete RAG system: PDF ingestion → text extraction → smart chunking (recursive character, semantic) → embedding generation → pgvector storage → hybrid search (BM25 + vector) → reranking → context compression → streamed response. Every step is raw Python — no LlamaIndex, no LangChain.</p>
+      <div class="proj-tags"><span class="proj-tag">pgvector</span><span class="proj-tag">sentence-transformers</span><span class="proj-tag">BM25</span><span class="proj-tag">reranking</span><span class="proj-tag">FastAPI</span><span class="proj-tag">streaming SSE</span></div>
+      <div class="proj-wow">You will be the only candidate in the room who can explain every line of their RAG pipeline. This is a massive differentiator.</div>
+    </div>
+
+    <div class="project-card intermediate">
+      <div class="proj-head">
+        <div>
+          <div style="font-family:var(--mono);font-size:0.68rem;color:#60A5FA;margin-bottom:0.3rem">PROJECT 04 · WEEK 7</div>
+          <h3>LLM Evaluation Harness</h3>
+        </div>
+        <span class="badge badge-blue">Intermediate</span>
+      </div>
+      <p class="proj-desc">A framework that runs your RAG system against a test dataset, calculates RAGAS metrics (faithfulness, context precision, answer relevancy), runs G-Eval scoring, and produces a dashboard report. Includes A/B test mode for comparing chunking strategies or prompt variants.</p>
+      <div class="proj-tags"><span class="proj-tag">RAGAS</span><span class="proj-tag">G-Eval</span><span class="proj-tag">pytest</span><span class="proj-tag">pandas</span><span class="proj-tag">charts</span></div>
+      <div class="proj-wow">99% of candidates have no evals. This signals product-grade thinking immediately.</div>
+    </div>
+
+    <div class="project-card intermediate">
+      <div class="proj-head">
+        <div>
+          <div style="font-family:var(--mono);font-size:0.68rem;color:#60A5FA;margin-bottom:0.3rem">PROJECT 05 · WEEK 9</div>
+          <h3>ReAct Agent from Scratch</h3>
+        </div>
+        <span class="badge badge-blue">Intermediate</span>
+      </div>
+      <p class="proj-desc">Implement the original ReAct paper in ~200 lines of Python. No LangChain. A while loop that: parses Thought/Action/Action Input from raw LLM output via regex, executes tools (web search, calculator, Python interpreter), feeds errors back as observations, stops on Final Answer or max iterations.</p>
+      <div class="proj-tags"><span class="proj-tag">ReAct</span><span class="proj-tag">tool-calling</span><span class="proj-tag">few-shot prompting</span><span class="proj-tag">regex parsing</span></div>
+      <div class="proj-wow">Implementing a paper from scratch shows research ability + engineering depth. Senior engineers respect this enormously.</div>
+    </div>
+
+    <div class="project-card advanced">
+      <div class="proj-head">
+        <div>
+          <div style="font-family:var(--mono);font-size:0.68rem;color:var(--amber);margin-bottom:0.3rem">PROJECT 06 · WEEK 11–12</div>
+          <h3>Multi-Agent Research System (LangGraph)</h3>
+        </div>
+        <span class="badge badge-amber">Advanced</span>
+      </div>
+      <p class="proj-desc">A LangGraph-based multi-agent system: Supervisor routes tasks to a Researcher (web search + RAG), Writer (drafts), and Editor (critiques with structured feedback). Cycles until Editor approves. Postgres checkpointing for conversation persistence. FastAPI endpoint streams intermediate steps via SSE. LangSmith tracing for every step.</p>
+      <div class="proj-tags"><span class="proj-tag">LangGraph</span><span class="proj-tag">supervisor pattern</span><span class="proj-tag">SSE</span><span class="proj-tag">LangSmith</span><span class="proj-tag">PostgreSQL checkpointing</span></div>
+      <div class="proj-wow">This demonstrates multi-agent architecture, observability, and streaming — three of the hottest skills in AI engineering right now.</div>
+    </div>
+
+    <div class="project-card advanced">
+      <div class="proj-head">
+        <div>
+          <div style="font-family:var(--mono);font-size:0.68rim;color:var(--amber);margin-bottom:0.3rem">PROJECT 07 · WEEK 13–14</div>
+          <h3>Production LLM Gateway (AI Router)</h3>
+        </div>
+        <span class="badge badge-amber">Advanced</span>
+      </div>
+      <p class="proj-desc">A multi-provider LLM proxy: load balances across OpenAI/Anthropic/Azure, handles 429s with exponential backoff, falls back to cheaper models on 500 errors, tracks per-user/per-request token costs in Postgres, semantic caches repeated queries in Redis, exposes a unified OpenAI-compatible API. Fully async FastAPI. CI/CD to AWS ECS.</p>
+      <div class="proj-tags"><span class="proj-tag">FastAPI</span><span class="proj-tag">multi-provider</span><span class="proj-tag">semantic caching</span><span class="proj-tag">cost tracking</span><span class="proj-tag">AWS ECS</span><span class="proj-tag">GitHub Actions</span></div>
+      <div class="proj-wow">This is production infrastructure. Building this shows you think about reliability, cost, and scale — not just demos.</div>
+    </div>
+
+    <div class="project-card advanced">
+      <div class="proj-head">
+        <div>
+          <div style="font-family:var(--mono);font-size:0.68rem;color:var(--amber);margin-bottom:0.3rem">PROJECT 08 · WEEK 16</div>
+          <h3>Full-Stack AI SaaS Application</h3>
+        </div>
+        <span class="badge badge-amber">Advanced</span>
+      </div>
+      <p class="proj-desc">A production SaaS: Next.js frontend + FastAPI backend + RAG pipeline + AI agents + Stripe payments (or usage tracking) + user auth + per-user knowledge bases. Deployed on AWS. The kind of thing that would get real users. Think: "Chat with your company's Notion wiki" or "AI-powered code review bot."</p>
+      <div class="proj-tags"><span class="proj-tag">Next.js</span><span class="proj-tag">FastAPI</span><span class="proj-tag">Auth</span><span class="proj-tag">RAG</span><span class="proj-tag">Agents</span><span class="proj-tag">AWS</span><span class="proj-tag">Stripe</span></div>
+      <div class="proj-wow">Shows full-stack thinking and product ownership. "I built this and got real users" ends interviews. You are immediately hired.</div>
+    </div>
+
+    <div class="project-card elite">
+      <div class="proj-head">
+        <div>
+          <div style="font-family:var(--mono);font-size:0.68rem;color:var(--amber);margin-bottom:0.3rem">PROJECT 09 · WEEK 18 · ★ ELITE CAPSTONE</div>
+          <h3>Fine-Tuned Domain Expert with Eval Harness</h3>
+        </div>
+        <span class="badge" style="background:var(--amber-dim);color:var(--amber);border-color:var(--amber-glow)">★ Elite</span>
+      </div>
+      <p class="proj-desc">Fine-tune a 7B model (Mistral/LLaMA) using QLoRA on a domain dataset you curated. Build a JSONL training set, run fine-tuning on Google Colab or Vast.ai, push to HuggingFace, deploy with vLLM or Ollama. Build an eval harness comparing fine-tuned vs base vs GPT-4 on your benchmark tasks. Show the results clearly in your README.</p>
+      <div class="proj-tags"><span class="proj-tag">QLoRA</span><span class="proj-tag">PEFT</span><span class="proj-tag">HuggingFace</span><span class="proj-tag">vLLM</span><span class="proj-tag">evaluation</span><span class="proj-tag">custom dataset</span></div>
+      <div class="proj-wow">You just moved from "AI engineer who uses models" to "AI engineer who builds and evaluates models." This is $30k more salary territory.</div>
+    </div>
+
+    <div class="project-card elite">
+      <div class="proj-head">
+        <div>
+          <div style="font-family:var(--mono);font-size:0.68rem;color:var(--amber);margin-bottom:0.3rem">PROJECT 10 · WEEK 19–20 · ★ ELITE CAPSTONE</div>
+          <h3>Open-Source AI Utility (Get GitHub Stars)</h3>
+        </div>
+        <span class="badge" style="background:var(--amber-dim);color:var(--amber);border-color:var(--amber-glow)">★ Elite</span>
+      </div>
+      <p class="proj-desc">Build something genuinely useful to the AI engineering community. Ideas: a Python library for chunking strategy benchmarking, a CLI tool for LLM cost estimation, a template repository for production RAG systems, a benchmarking suite for vector DB retrieval quality. Promote it on HackerNews, Reddit r/MachineLearning, and X. Aim for 100+ GitHub stars.</p>
+      <div class="proj-tags"><span class="proj-tag">Open-source</span><span class="proj-tag">community value</span><span class="proj-tag">documentation</span><span class="proj-tag">PyPI package</span></div>
+      <div class="proj-wow">GitHub stars are a social proof signal that hiring managers notice. 100+ stars = "this engineer builds things people want." Priceless.</div>
+    </div>
+
+    <div class="project-card elite">
+      <div class="proj-head">
+        <div>
+          <div style="font-family:var(--mono);font-size:0.68rem;color:var(--amber);margin-bottom:0.3rem">PROJECT 11 · WEEK 21 · ★ ULTIMATE CAPSTONE</div>
+          <h3>Multi-Tenant AI Platform with Full Observability</h3>
+        </div>
+        <span class="badge" style="background:var(--amber-dim);color:var(--amber);border-color:var(--amber-glow)">★ Ultimate</span>
+      </div>
+      <p class="proj-desc">Combine Projects 6, 7, and 8 into a cohesive platform: multi-tenant auth (each user has isolated vector stores), LLM routing gateway, agent workflows, usage billing, token cost dashboard, latency percentile tracking, and model performance comparison. This is the kind of system that gets funded or gets you hired at a Series A startup as the founding AI engineer.</p>
+      <div class="proj-tags"><span class="proj-tag">Multi-tenancy</span><span class="proj-tag">gateway</span><span class="proj-tag">agents</span><span class="proj-tag">billing</span><span class="proj-tag">observability</span><span class="proj-tag">scale</span></div>
+      <div class="proj-wow">This is your portfolio centerpiece. This demo in an interview ends the loop early. You get an offer before the system design round.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════ TIMELINE ════════════════════════════════════ -->
+<section id="timeline">
+  <div class="section-eyebrow">Execution Calendar</div>
+  <h2>24-Week Milestone Timeline</h2>
+  <p class="section-lead">Concrete milestones every two weeks. Each milestone is binary: done or not done. No partial credit.</p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="tl-dot amber"></div>
+      <div class="tl-label">WEEKS 1–4</div>
+      <div class="tl-title">Phase 1: Backend Mastery</div>
+      <div class="tl-body">Advanced Python async, PostgreSQL internals, FastAPI production patterns, Docker, Redis. By Week 4 you ship a deployable REST API with auth, DB, cache, and CI pipeline.</div>
+      <div class="tl-deliverables">
+        <span class="badge badge-green">P01: Async CLI Chat</span>
+        <span class="badge badge-green">P02: Production FastAPI Backend</span>
+        <span class="badge badge-amber">GitHub: 28+ commits</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-dot blue"></div>
+      <div class="tl-label">WEEKS 5–8</div>
+      <div class="tl-title">Phase 2: LLM & RAG Engineering</div>
+      <div class="tl-body">Raw LLM API calls, tokenization, embeddings math, pgvector, hybrid search, reranking, streaming SSE, structured outputs, cost tracking, RAGAS evals.</div>
+      <div class="tl-deliverables">
+        <span class="badge badge-blue">P03: RAG from Scratch</span>
+        <span class="badge badge-blue">P04: Eval Harness</span>
+        <span class="badge badge-amber">GitHub: 56+ commits</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-dot amber"></div>
+      <div class="tl-label">WEEKS 9–12</div>
+      <div class="tl-title">Phase 3: Agent Orchestration</div>
+      <div class="tl-body">ReAct from scratch, LangGraph state machines, Postgres checkpointing, human-in-the-loop, multi-agent supervisor pattern, LangSmith observability, SSE streaming of agent steps.</div>
+      <div class="tl-deliverables">
+        <span class="badge badge-blue">P05: ReAct from Scratch</span>
+        <span class="badge badge-amber">P06: Multi-Agent System</span>
+        <span class="badge badge-amber">GitHub: 84+ commits</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-dot indigo"></div>
+      <div class="tl-label">WEEKS 13–16</div>
+      <div class="tl-title">Phase 4: Production & Cloud Deployment</div>
+      <div class="tl-body">AWS ECS Fargate, GitHub Actions CI/CD, CloudWatch monitoring, Helicone cost dashboards, security hardening, async task queues, connection pooling, semantic caching.</div>
+      <div class="tl-deliverables">
+        <span class="badge badge-amber">P07: LLM Gateway on AWS</span>
+        <span class="badge badge-amber">P08: Full-Stack AI SaaS</span>
+        <span class="badge badge-indigo">LinkedIn: Start posting</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-dot cyan"></div>
+      <div class="tl-label">WEEKS 17–20</div>
+      <div class="tl-title">Phase 5: Elite Skills + Open Source</div>
+      <div class="tl-body">QLoRA fine-tuning, vLLM serving, custom eval benchmarks, open-source utility release, HackerNews Show HN post, LinkedIn content flywheel starts generating inbound.</div>
+      <div class="tl-deliverables">
+        <span class="badge badge-cyan">P09: Fine-Tuned Model</span>
+        <span class="badge badge-cyan">P10: OSS Library (aim 50+ stars)</span>
+        <span class="badge badge-amber">Resume v1 sent to 3 trusted engineers</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-dot amber"></div>
+      <div class="tl-label">WEEKS 21–24</div>
+      <div class="tl-title">Phase 6: Full Job Hunt Sprint</div>
+      <div class="tl-body">Resume finalized, P11 deployed, 15–20 quality applications/week, mock interview daily, warm outreach to 50 engineers at target companies, first offers expected by Week 24.</div>
+      <div class="tl-deliverables">
+        <span class="badge" style="background:var(--amber-dim);color:var(--amber);border-color:var(--amber-glow)">P11: Ultimate Platform Deployed</span>
+        <span class="badge badge-green">Target: 3+ interviews/week</span>
+        <span class="badge badge-green">Target: First offer by Week 24</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ TECH STACK ══════════════════════════════════ -->
+<section id="techstack">
+  <div class="section-eyebrow">Technical Foundation</div>
+  <h2>The Exact Tech Stack to Master</h2>
+  <p class="section-lead">These are the tools that appear in >60% of AI engineering job descriptions in 2026. Master these and you are qualified for the role. Anything not on this list is optional.</p>
+
+  <div class="table-wrap" style="margin-bottom:2rem">
+    <table>
+      <thead><tr><th>Category</th><th>Primary (Must Master)</th><th>Secondary (Know Well)</th><th>Avoid Rabbit Holes</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Language</strong></td><td>Python 3.11+ (asyncio, typing, Pydantic v2)</td><td>TypeScript (for frontend integration)</td><td>Java, Go, Rust for now</td></tr>
+        <tr><td><strong>LLM APIs</strong></td><td>OpenAI API, Anthropic API, raw <code>httpx</code></td><td>LiteLLM, Mistral API, Gemini API</td><td>Using only the SDK wrappers</td></tr>
+        <tr><td><strong>Frameworks</strong></td><td>FastAPI, Pydantic v2, asyncpg</td><td>Next.js (basic), Celery/ARQ</td><td>Django, Flask (legacy context)</td></tr>
+        <tr><td><strong>Vector & Search</strong></td><td>pgvector, Qdrant</td><td>Weaviate, Pinecone (know the API)</td><td>Elasticsearch for AI use cases</td></tr>
+        <tr><td><strong>Agents</strong></td><td>LangGraph, raw agent loops</td><td>CrewAI (know it exists), Autogen</td><td>LangChain (use LangGraph instead)</td></tr>
+        <tr><td><strong>Databases</strong></td><td>PostgreSQL, Redis</td><td>SQLite (testing), DynamoDB (basics)</td><td>MongoDB, Cassandra</td></tr>
+        <tr><td><strong>Cloud</strong></td><td>AWS (ECS, S3, RDS, Lambda, ECR, IAM)</td><td>GCP basics (Vertex AI), Azure basics</td><td>Deep Kubernetes (not for job search)</td></tr>
+        <tr><td><strong>DevOps</strong></td><td>Docker, Docker Compose, GitHub Actions</td><td>Terraform basics, AWS CDK basics</td><td>Helm, ArgoCD, Spinnaker</td></tr>
+        <tr><td><strong>ML/AI</strong></td><td>HuggingFace, sentence-transformers, PEFT/LoRA</td><td>vLLM, Ollama, BentoML</td><td>PyTorch internals, custom CUDA</td></tr>
+        <tr><td><strong>Observability</strong></td><td>LangSmith, Helicone, structured logging</td><td>Prometheus basics, Grafana</td><td>DataDog (expensive, know it exists)</td></tr>
+        <tr><td><strong>Testing</strong></td><td>pytest, pytest-asyncio, RAGAS</td><td>httpx test client, factory-boy</td><td>Selenium, complex e2e for now</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ IGNORE ══════════════════════════════════ -->
+<section id="ignore">
+  <div class="section-eyebrow">Time Protection</div>
+  <h2>What to Ignore & Avoid</h2>
+  <p class="section-lead">Every hour spent on the wrong thing is an hour not spent building the portfolio that gets you hired. Be ruthless with your time.</p>
+
+  <div class="ignore-item">
+    <div class="ig-x">✕</div>
+    <div class="ig-text"><strong>LangChain (as your primary tool)</strong><span>LangChain has serious abstraction leakage and version instability. Learn the underlying concepts (LangGraph is fine), then abstract later. Candidates who only know LangChain cannot answer "what is your agent actually doing" — a standard interview question.</span></div>
+  </div>
+  <div class="ignore-item">
+    <div class="ig-x">✕</div>
+    <div class="ig-text"><strong>Kubernetes Deep Dive</strong><span>K8s is valuable at scale. For job search, Docker + AWS ECS Fargate is sufficient and faster to learn. Kubernetes takes months to truly understand. Learn it after you have an offer.</span></div>
+  </div>
+  <div class="ignore-item">
+    <div class="ig-x">✕</div>
+    <div class="ig-text"><strong>Tutorial Hell (Udemy, YouTube courses)</strong><span>Courses are not building. You cannot put "completed 5 courses" on a resume and expect it to matter. Every hour watching a course should produce a code commit. If you have been watching for 3 hours and have nothing to commit, stop immediately.</span></div>
+  </div>
+  <div class="ignore-item">
+    <div class="ig-x">✕</div>
+    <div class="ig-text"><strong>Streamlit as your portfolio showcase</strong><span>Streamlit is for quick prototypes. Every AI engineering tutorial uses it. A portfolio full of Streamlit apps signals "I followed tutorials." Build real APIs with FastAPI. Build real frontends or demo it via Postman/curl with screen recordings.</span></div>
+  </div>
+  <div class="ignore-item">
+    <div class="ig-x">✕</div>
+    <div class="ig-text"><strong>Academic Paper Deep Dives (beyond what's needed)</strong><span>You do not need to read 50 papers. You need to read 5 key papers: Attention Is All You Need, RAG (Lewis et al.), ReAct, Toolformer, and Constitutional AI. Implement one. That is more impressive than reading 50.</span></div>
+  </div>
+  <div class="ignore-item">
+    <div class="ig-x">✕</div>
+    <div class="ig-text"><strong>Building proprietary wrappers before understanding fundamentals</strong><span>Do not use LlamaIndex until you have built a RAG pipeline in pure Python. Do not use LangGraph until you have built a ReAct loop from scratch. Frameworks hide failure modes. Fundamentals expose them.</span></div>
+  </div>
+  <div class="ignore-item">
+    <div class="ig-x">✕</div>
+    <div class="ig-text"><strong>MLOps deep dive (MLflow, Kubeflow, Sagemaker Pipelines)</strong><span>MLOps is a separate career track. AI engineers are not expected to manage training pipelines. Know what these tools do conceptually. Deep expertise is not required for the roles you are targeting.</span></div>
+  </div>
+  <div class="ignore-item">
+    <div class="ig-x">✕</div>
+    <div class="ig-text"><strong>Hard LeetCode (DP, Segment Trees, Competitive Programming)</strong><span>Most AI engineering roles test Easy to Medium LeetCode. Companies like Anthropic, OpenAI, and top AI startups care far more about your system design and AI knowledge. Do not spend 40 hours on hard DP problems.</span></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ GITHUB ══════════════════════════════════ -->
+<section id="github">
+  <div class="section-eyebrow">Portfolio Strategy</div>
+  <h2>GitHub Portfolio System</h2>
+  <p class="section-lead">Your GitHub is your second resume. Hiring managers spend 90 seconds on it. Here is exactly how to make those 90 seconds convert to an interview.</p>
+
+  <div class="callout callout-amber">
+    <strong>The 90-Second GitHub Audit</strong>
+    Hiring managers check: (1) Contribution graph — is it active? (2) Pinned repos — do they look interesting? (3) Readme of the most interesting repo — does it have a clear problem statement, architecture diagram, and demo? (4) Commit messages — are they coherent? 4 things. Make all 4 excellent.
+  </div>
+
+  <h3 style="font-size:1rem;margin-bottom:0.8rem;color:var(--text2)">Your 6 Pinned Repositories (in this order)</h3>
+
+  <div class="github-repo">
+    <div class="repo-num">1</div>
+    <div>
+      <div class="repo-name">🏗️ ultimate-ai-platform <span style="font-family:var(--mono);font-size:0.72rem;color:var(--amber);margin-left:0.5rem">FEATURED</span></div>
+      <div class="repo-desc">Your P11 capstone. Multi-tenant AI platform with agents, RAG, gateway, observability. Live demo link in README. Architecture diagram. This is pinned #1.</div>
+      <div style="margin-top:0.4rem;display:flex;gap:0.4rem;flex-wrap:wrap">
+        <span class="proj-tag">fastapi</span><span class="proj-tag">langgraph</span><span class="proj-tag">pgvector</span><span class="proj-tag">aws-ecs</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="github-repo">
+    <div class="repo-num">2</div>
+    <div>
+      <div class="repo-name">🔍 rag-pipeline-from-scratch</div>
+      <div class="repo-desc">P03. Complete RAG system, no LangChain. README has benchmark comparison of chunking strategies. Shows you know the internals.</div>
+      <div style="margin-top:0.4rem;display:flex;gap:0.4rem;flex-wrap:wrap">
+        <span class="proj-tag">rag</span><span class="proj-tag">pgvector</span><span class="proj-tag">hybrid-search</span><span class="proj-tag">reranking</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="github-repo">
+    <div class="repo-num">3</div>
+    <div>
+      <div class="repo-name">⚡ llm-gateway</div>
+      <div class="repo-desc">P07. Multi-provider LLM router. Semantic caching. Cost tracking. Shows production engineering thinking. Include benchmarks showing latency improvement with caching.</div>
+      <div style="margin-top:0.4rem;display:flex;gap:0.4rem;flex-wrap:wrap">
+        <span class="proj-tag">api-gateway</span><span class="proj-tag">redis</span><span class="proj-tag">multi-provider</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="github-repo">
+    <div class="repo-num">4</div>
+    <div>
+      <div class="repo-name">🤖 react-agent-scratch</div>
+      <div class="repo-desc">P05. Pure Python ReAct implementation. README links to the paper it implements. 200 lines of code that most engineers cannot write.</div>
+      <div style="margin-top:0.4rem;display:flex;gap:0.4rem;flex-wrap:wrap">
+        <span class="proj-tag">agents</span><span class="proj-tag">react-paper</span><span class="proj-tag">tool-calling</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="github-repo">
+    <div class="repo-num">5</div>
+    <div>
+      <div class="repo-name">🎛️ [your-oss-utility] (P10)</div>
+      <div class="repo-desc">Your open-source contribution. Put it here if it has 50+ stars — social proof. Include a "Used by X developers" badge if you can get it.</div>
+    </div>
+  </div>
+
+  <div class="github-repo">
+    <div class="repo-num">6</div>
+    <div>
+      <div class="repo-name">🚀 production-fastapi-template</div>
+      <div class="repo-desc">P02 as a reusable template. Auth, DB, Redis, Docker, CI/CD. Developers star templates. Real world utility = organic GitHub traffic.</div>
+    </div>
+  </div>
+
+  <div class="sep"></div>
+  <h3 style="font-size:1rem;margin-bottom:0.8rem;color:var(--text2)">README Template for Every Project</h3>
+  <div class="code-block">
+<span class="cm"># Project Name</span>
+
+<span class="kw">## Problem</span>
+One paragraph: what problem does this solve? Why does it matter?
+
+<span class="kw">## Architecture</span>
+[Insert diagram — draw.io, Excalidraw, or ASCII art]
+
+<span class="kw">## Demo</span>
+[GIF or video link — use Loom for quick demos]
+
+<span class="kw">## Technical Highlights</span>
+- What interesting engineering decision did you make?
+- What trade-off did you consciously make and why?
+- What would you do differently?
+
+<span class="kw">## Performance / Benchmarks</span>
+<span class="str">| Metric | Value |
+|--------|-------|
+| p95 Latency | 180ms |
+| Cost per query | $0.0003 |</span>
+
+<span class="kw">## Running Locally</span>
+<span class="str">cp .env.example .env
+docker compose up</span>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ RESUME ══════════════════════════════════ -->
+<section id="resume">
+  <div class="section-eyebrow">Application Strategy</div>
+  <h2>Resume Strategy for Global Companies</h2>
+  <p class="section-lead">One page. ATS-friendly. Every bullet quantified. No "responsible for" — only "built," "shipped," "reduced," "increased."</p>
+
+  <div class="card-grid" style="margin-bottom:1.5rem">
+    <div class="card">
+      <h3>Resume Structure (in order)</h3>
+      <ul style="margin-top:0.5rem">
+        <li><strong>Header:</strong> Name, GitHub link, LinkedIn, deployed-project URL, location (City, India — be upfront)</li>
+        <li><strong>Summary (2 lines):</strong> "AI Engineer with X years building production LLM systems. Shipped Y and Z serving N users."</li>
+        <li><strong>Projects (before work experience if &lt;3 years exp):</strong> 3 projects max, 3 bullets each, quantified</li>
+        <li><strong>Work Experience:</strong> AI/ML/backend work only — cut everything else</li>
+        <li><strong>Skills:</strong> Short, clean list. Python, FastAPI, PostgreSQL, pgvector, LangGraph, AWS, Docker</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Bullet Point Formula</h3>
+      <ul style="margin-top:0.5rem">
+        <li><strong>❌ Bad:</strong> "Worked on RAG pipeline for document Q&amp;A system"</li>
+        <li><strong>✅ Good:</strong> "Built production RAG pipeline (pgvector + hybrid BM25 search) reducing hallucination rate by 40% on internal benchmark; served 500 queries/day in prod"</li>
+        <li><strong>❌ Bad:</strong> "Used LangGraph to build agents"</li>
+        <li><strong>✅ Good:</strong> "Architected 4-agent research system (LangGraph) with LangSmith observability; cut research cycle from 45min to 8min"</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Company Type</th><th>Emphasis</th><th>What to Lead With</th><th>Keywords to Include</th></tr></thead>
+      <tbody>
+        <tr><td><strong>AI-First Startups (Series A-B)</strong></td><td>Speed + ownership</td><td>The SaaS project + fine-tuning experience</td><td>agents, RAG, production, shipped, owned</td></tr>
+        <tr><td><strong>US Remote-First Companies</strong></td><td>Async communication + independence</td><td>Deployed production systems, GitHub activity</td><td>async, remote, deployed, documented</td></tr>
+        <tr><td><strong>Product Companies (B2B SaaS)</strong></td><td>Integration + reliability</td><td>LLM Gateway + backend engineering depth</td><td>reliability, cost optimization, latency</td></tr>
+        <tr><td><strong>Platforms / Tools Companies</strong></td><td>Open-source + community</td><td>OSS contribution + GitHub stars</td><td>open-source, contributor, PyPI, community</td></tr>
+        <tr><td><strong>Consulting/Agency (High Pay)</strong></td><td>Breadth + speed</td><td>Multiple diverse shipped projects</td><td>end-to-end, multi-client, delivered</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout callout-blue" style="margin-top:1.5rem">
+    <strong>India Location — Handle It Directly</strong>
+    Do not hide your location and do not apologize for it. In your cover letter or outreach: "I'm based in India (IST), which gives me 3–5 hour overlap with US East and full overlap with EU. I'm experienced working async-first and ship with full documentation so my work speaks 24/7." Companies that reject location are wasting your time — move on fast.
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ LINKEDIN ══════════════════════════════════ -->
+<section id="linkedin">
+  <div class="section-eyebrow">Digital Presence</div>
+  <h2>LinkedIn Optimization Strategy</h2>
+  <p class="section-lead">LinkedIn is your inbound channel. Recruiters search it. Engineers find you. Posts build credibility. This is not optional — it is part of the job hunt.</p>
+
+  <div class="two-col">
+    <div class="card">
+      <h4>Profile Optimization</h4>
+      <ul>
+        <li><strong>Headline:</strong> "AI Engineer | LLM Systems, RAG, Agents | FastAPI + AWS | Open to Remote" — specific, keyword-rich</li>
+        <li><strong>Banner:</strong> Custom banner with your tagline and tech stack icons (Canva)</li>
+        <li><strong>About:</strong> 3 paragraphs: who you are + what you build + what you're looking for. End with a CTA link to your GitHub</li>
+        <li><strong>Featured Section:</strong> Pin your best project demo video (Loom), your best LinkedIn post, and your GitHub</li>
+        <li><strong>Skills:</strong> Add the exact keywords from job descriptions. Endorsements matter to recruiter filters</li>
+        <li><strong>Open to Work:</strong> Enable "Open to Work" visible only to recruiters, not your network</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Content Strategy (2x/week minimum)</h4>
+      <ul>
+        <li><strong>Build-in-Public posts:</strong> "I just shipped X. Here's what I learned." With a screenshot. No fluff.</li>
+        <li><strong>Technical insight posts:</strong> "3 ways to optimize RAG retrieval I discovered this week" — actionable, specific</li>
+        <li><strong>Project launches:</strong> Screenshot + 1-sentence problem + link. Tag your tools (pgvector, LangGraph teams).</li>
+        <li><strong>Reposts with commentary:</strong> Repost industry news with your 3-sentence take. Low effort, builds presence.</li>
+        <li><strong>Thread format:</strong> Long-form carousels get 5x more reach than single posts on LinkedIn in 2026.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout callout-green" style="margin-top:1.5rem">
+    <strong>Connection Strategy</strong>
+    Do NOT spam connect to 500 people. Connect with: (1) AI engineers at companies you want to work at — send a personalised 2-line note mentioning their work, (2) AI startup founders — they are often directly hiring, (3) Technical recruiters who specialize in AI roles. 10 quality connections/week beats 100 generic ones.
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ SYSDESIGN ══════════════════════════════════ -->
+<section id="sysdesign">
+  <div class="section-eyebrow">Interview Preparation</div>
+  <h2>System Design Preparation</h2>
+  <p class="section-lead">AI engineering system design rounds test your ability to design scalable AI-powered systems, not general distributed systems. The questions are different. Here's exactly what gets asked.</p>
+
+  <div class="callout callout-amber">
+    <strong>The AI System Design Framework</strong>
+    For every AI system design question, answer in this order: (1) Clarify requirements + scale, (2) Define the data flow end-to-end, (3) Choose and justify each component, (4) Identify the three main failure modes, (5) Explain how you'd monitor it and know it's working, (6) Identify the biggest cost driver and how to optimize it.
+  </div>
+
+  <h3 style="font-size:1rem;margin-bottom:0.8rem;color:var(--text2)">The 8 Most Common AI System Design Questions</h3>
+
+  <div class="interview-q open" onclick="this.classList.toggle('open')">
+    <div class="iq-question">Design a RAG system for a 10M-document enterprise knowledge base</div>
+    <div class="iq-answer">
+      <p><strong>Key components:</strong> Document ingestion pipeline (chunking strategy: semantic > recursive character for long docs), embedding model selection (cost vs quality trade-off: text-embedding-3-small vs 3-large), vector store with HNSW index for ANN search, hybrid BM25+vector search for recall, cross-encoder reranker for precision, context compression to fit token limits, LLM with structured output, cost tracking per query.</p>
+      <p style="margin-top:0.7rem"><strong>Failure modes to address:</strong> (1) Stale embeddings when documents update — use version hashing, (2) Hallucination on out-of-scope queries — add a "No relevant context found" classifier, (3) Token limit overflow — implement context budgeting with dynamic truncation. Scale answer: Use async ingestion queue (Celery/ARQ), connection pooling for pgvector, Redis semantic cache for repeated queries.</p>
+    </div>
+  </div>
+
+  <div class="interview-q" onclick="this.classList.toggle('open')">
+    <div class="iq-question">Design an AI agent that can browse the web and write reports</div>
+    <div class="iq-answer">
+      <p><strong>Architecture:</strong> FastAPI orchestrator → LangGraph agent state machine → Tools: [web_search(Brave/Serper API), fetch_page(Playwright headless), write_section(LLM call), save_draft(Postgres)]. Supervisor pattern for complex reports (Researcher → Writer → Editor loop). Postgres checkpointing for resume-on-failure. Async task queue (ARQ) so long-running agents don't block HTTP connections. Stream intermediate steps via SSE to frontend.</p>
+      <p style="margin-top:0.7rem"><strong>Critical considerations:</strong> Max iteration limit (prevent infinite loops), tool error handling (feed errors back to agent), cost cap per session (reject if projected cost exceeds $X), timeout on each tool call (Playwright pages can hang), output validation (is the report actually written?)</p>
+    </div>
+  </div>
+
+  <div class="interview-q" onclick="this.classList.toggle('open')">
+    <div class="iq-question">Design an LLM API gateway that serves 1,000 RPS</div>
+    <div class="iq-answer">
+      <p><strong>Components:</strong> Load balancer → API Gateway (FastAPI, multiple workers) → Request router (by model, cost tier, SLA) → Provider pool (OpenAI, Anthropic, Azure) → Semantic cache (Redis with cosine similarity) → Cost tracker (Postgres, async writes) → Rate limiter (Redis token bucket per API key). Cache hit = 0 LLM cost. For 1000 RPS: multiple ECS Fargate tasks, horizontal scaling. Provider failover in &lt;100ms.</p>
+      <p style="margin-top:0.7rem"><strong>Key metrics to track:</strong> Cache hit rate (target &gt;30%), p95 latency per provider, cost per request per user, 429 rate per provider. At 1000 RPS, even 30% cache hit rate saves thousands of dollars/month.</p>
+    </div>
+  </div>
+
+  <div class="interview-q" onclick="this.classList.toggle('open')">
+    <div class="iq-question">How would you evaluate and improve a RAG system that's producing wrong answers?</div>
+    <div class="iq-answer">
+      <p><strong>Systematic debugging approach:</strong> Run RAGAS evaluation on a labeled test set. Look at each component individually: (1) Retrieval: Is the right chunk being retrieved? Calculate recall@k. Common fix: better chunking, add metadata filtering, switch from cosine to BM25+vector hybrid. (2) Generation: Is the LLM hallucinating from the retrieved context? Check faithfulness score. Common fix: add explicit "only answer from context" in system prompt, reduce temperature. (3) Context: Is the context window overflowing? Log token counts per request. Fix: context compression, cohere rerank to top-3. Instrument every step with LangSmith to see exactly what the LLM received.</p>
+    </div>
+  </div>
+
+  <div class="interview-q" onclick="this.classList.toggle('open')">
+    <div class="iq-question">Design a real-time AI code review system for GitHub PRs</div>
+    <div class="iq-answer">
+      <p><strong>Flow:</strong> GitHub Webhook → FastAPI endpoint → validate signature → push to ARQ queue → async worker: fetch PR diff via GitHub API → analyze each file change with LLM (code review prompt + few-shot examples of good reviews) → use RAG over company coding standards → post GitHub Review via API with inline comments. Webhook must return 200 immediately (GitHub 10s timeout) — all processing is async. Rate limit: 1 LLM call per file, skip generated/config files. Cost optimization: cache review templates, use haiku/flash for simple linting checks, use claude-3-5-sonnet only for complex logic review.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ DSA ══════════════════════════════════ -->
+<section id="dsa">
+  <div class="section-eyebrow">Coding Interviews</div>
+  <h2>DSA Expectations (Realistic Level)</h2>
+  <p class="section-lead">AI engineering companies test coding, but not at competitive programming levels. Here is exactly what you need — and what you can safely skip.</p>
+
+  <div class="two-col">
+    <div class="card">
+      <h4>What Gets Asked (Practice This)</h4>
+      <ul>
+        <li>Array manipulation, sliding window, two pointers</li>
+        <li>Hash maps and hash sets (used in 40% of Easy problems)</li>
+        <li>String processing (tokenization, parsing)</li>
+        <li>BFS/DFS on trees and graphs</li>
+        <li>Binary search (simple variant)</li>
+        <li>Stack/Queue problems</li>
+        <li>Recursion with memoization (basic DP)</li>
+        <li>Sorting and custom comparators</li>
+      </ul>
+    </div>
+    <div class="card neg">
+      <h4 style="color:var(--red)">What Is NOT Expected (Skip)</h4>
+      <ul>
+        <li>Segment Trees, Fenwick Trees</li>
+        <li>Advanced Graph algorithms (Dijkstra is fine, A* skip)</li>
+        <li>Hard Dynamic Programming (knapsack, edit distance edge cases)</li>
+        <li>Bit manipulation tricks</li>
+        <li>Trie implementation from scratch (know the concept)</li>
+        <li>Competitive programming patterns</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout callout-blue" style="margin-top:1.5rem">
+    <strong>DSA Strategy</strong>
+    Do 5 LeetCode Easy/Medium problems per week in Python during your full 24-week period. That's 120 problems total — more than enough. Prioritize: 30 array problems, 20 hash map problems, 20 tree problems, 15 graph BFS/DFS problems, 15 string problems, 20 mixed. Never skip the weekly 5 — consistent practice beats cram sessions.
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ INTERVIEWS ══════════════════════════════════ -->
+<section id="interviews">
+  <div class="section-eyebrow">Interview Mastery</div>
+  <h2>AI Engineering Interview Preparation</h2>
+  <p class="section-lead">AI engineering interviews have 4 rounds. Most candidates fail Round 3 (system design) and Round 2 (take-home). Here is how to pass all 4.</p>
+
+  <div class="table-wrap" style="margin-bottom:1.5rem">
+    <table>
+      <thead><tr><th>Round</th><th>What It Tests</th><th>How to Prepare</th><th>Common Failure Mode</th></tr></thead>
+      <tbody>
+        <tr><td><strong>1. Recruiter Screen (30min)</strong></td><td>Communication, role fit, location/timezone</td><td>Know your story cold: "I build production LLM systems. My best project is X. It solves Y. Here's how I built it." 90 seconds, no rambling.</td><td>Unclear narrative, nervous energy, can't describe projects concisely</td></tr>
+        <tr><td><strong>2. Technical Take-Home (1–3 days)</strong></td><td>Real engineering ability, code quality, documentation</td><td>Write clean code, include tests, write a README that explains your decisions. Reviewers look for: tests exist, error handling, your reasoning in comments/README.</td><td>No tests, no README, rushed code quality, no error handling</td></tr>
+        <tr><td><strong>3. System Design (60min)</strong></td><td>Architecture thinking, AI-specific design, trade-offs</td><td>Use the 6-step framework. Practice the 8 common AI system design questions weekly. Draw diagrams while talking. Proactively mention failure modes.</td><td>Can't estimate scale, no failure mode discussion, generic answers</td></tr>
+        <tr><td><strong>4. Behavioral (45min)</strong></td><td>Self-direction, ownership, collaboration, async comms</td><td>STAR format for every answer. Have 5 pre-prepared stories covering: (1) I fixed a hard bug, (2) I disagreed with a decision, (3) I took ownership, (4) I learned something fast, (5) I mentored someone.</td><td>Vague answers, no specific numbers, can't talk about mistakes</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="font-size:1rem;margin-bottom:0.8rem;color:var(--text2)">Top AI Engineering Interview Questions (with Answer Framework)</h3>
+
+  <div class="interview-q open" onclick="this.classList.toggle('open')">
+    <div class="iq-question">Explain how your RAG system handles hallucinations.</div>
+    <div class="iq-answer">
+      <p><strong>Weak answer:</strong> "I add a system prompt that says only answer from context."</p>
+      <p style="margin-top:0.5rem"><strong>Strong answer:</strong> "I tackle hallucination at three layers. First, retrieval: I use hybrid BM25+vector search plus a cross-encoder reranker to ensure highly relevant context. If the top-k similarity score is below threshold 0.6, I return 'I don't have reliable information on this' instead of generating. Second, generation: my system prompt explicitly instructs the model to cite the source chunk for each claim, which forces groundedness. Third, post-generation: I run a faithfulness check using RAGAS — it measures whether each claim in the output is supported by the retrieved context. If faithfulness drops below 0.7 on our test set, we iterate on the prompt. I track hallucination rate as a live metric per model per prompt version."</p>
+    </div>
+  </div>
+
+  <div class="interview-q" onclick="this.classList.toggle('open')">
+    <div class="iq-question">When would you fine-tune a model vs use RAG vs just improve the prompt?</div>
+    <div class="iq-answer">
+      <p><strong>Decision framework:</strong> Start with prompt engineering — it's free and reversible. If the problem is "the model doesn't know the right format or style," fine-tune. If the problem is "the model doesn't know specific facts that change frequently," use RAG — fine-tuning can't handle dynamic knowledge. If the problem is "the model doesn't perform well on a narrow domain task with specific reasoning patterns," fine-tune on domain data. Cost heuristic: prompting is cheapest, RAG adds storage/retrieval cost, fine-tuning has upfront compute cost but reduces per-token cost at scale. At very high volume (&gt;1M calls/day), a fine-tuned smaller model (3B) can be cheaper and faster than GPT-4o + RAG.</p>
+    </div>
+  </div>
+
+  <div class="interview-q" onclick="this.classList.toggle('open')">
+    <div class="iq-question">How do you measure the quality of an agent's performance in production?</div>
+    <div class="iq-answer">
+      <p><strong>Answer:</strong> Three categories of metrics. (1) Task completion: Does the agent finish the task? Track success rate. Requires defining a clear "done" state — often the hardest part. (2) Efficiency: How many tool calls does it take? Cost per completed task. Latency per session. An agent that takes 12 tool calls to answer a 2-tool question has a prompting or loop control problem. (3) Quality: This is LLM-as-judge. I run a separate LLM evaluation of the final output against success criteria. I also track tool error rate (how often does a tool throw an exception) and recovery rate (does the agent recover from errors correctly). Everything is traced in LangSmith, so I can replay any session and see exactly what went wrong.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ OPENSOURCE ══════════════════════════════════ -->
+<section id="opensource">
+  <div class="section-eyebrow">Community Credibility</div>
+  <h2>Open-Source Contribution Strategy</h2>
+  <p class="section-lead">Open-source contributions are credibility multipliers. One accepted PR to a major AI project is worth more than 10 tutorial projects. Here's how to get your first meaningful contribution.</p>
+
+  <div class="table-wrap" style="margin-bottom:1.5rem">
+    <table>
+      <thead><tr><th>Repository</th><th>Difficulty</th><th>What to Contribute</th><th>Why It Matters</th></tr></thead>
+      <tbody>
+        <tr><td><strong>LangGraph (langchain-ai)</strong></td><td>Medium</td><td>Documentation improvements, new example notebooks, bug fixes in graph traversal</td><td>High visibility in AI community, maintainers are active, fast review</td></tr>
+        <tr><td><strong>pgvector</strong></td><td>Medium-Hard</td><td>Python client examples, benchmark scripts, documentation</td><td>Core infrastructure — contributions are rare and highly valued</td></tr>
+        <tr><td><strong>RAGAS</strong></td><td>Easy-Medium</td><td>New metrics, bug reports, documentation, new model integrations</td><td>Used by everyone building RAG — high community visibility</td></tr>
+        <tr><td><strong>LiteLLM</strong></td><td>Easy</td><td>New model provider additions, bug fixes, test coverage</td><td>Very active project, fast merges, founder is responsive</td></tr>
+        <tr><td><strong>Qdrant</strong></td><td>Medium</td><td>Python SDK examples, documentation improvements, benchmark tools</td><td>Growing fast — early contributors get recognized</td></tr>
+        <tr><td><strong>Your Own OSS (P10)</strong></td><td>You control it</td><td>Launch it, maintain it, respond to issues quickly</td><td>Being a maintainer > being a contributor in terms of signal</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout callout-green">
+    <strong>First PR Strategy</strong>
+    Don't start with code. Start with: (1) Find a documentation mistake or outdated example in a target repo, (2) Open an issue first: "I noticed the X example in the docs is broken with version Y. I'll submit a PR to fix it." Maintainers reply and confirm. (3) Submit the fix. (4) Now you have a relationship with a maintainer and your name is in their commit history. This compounds. Your next PR has context.
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ BRANDING ══════════════════════════════════ -->
+<section id="branding">
+  <div class="section-eyebrow">Visibility Engine</div>
+  <h2>Personal Brand Strategy</h2>
+  <p class="section-lead">You don't need to be famous. You need to be findable by the right people. A focused content strategy on LinkedIn and X/Twitter builds inbound opportunities that are 10x easier than cold applications.</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>LinkedIn (Primary Channel)</h3>
+      <p style="margin-top:0.4rem">2 posts/week. Build-in-public + technical tips. Carousel posts (PDF slides) perform best. Share what you built this week, one technical insight you discovered, one mistake you made. Consistent for 12 weeks = visible to recruiters organically.</p>
+    </div>
+    <div class="card">
+      <h3>X / Twitter (Secondary)</h3>
+      <p style="margin-top:0.4rem">Post when you ship something. Reply intelligently to top AI engineers (Andrej Karpathy, Simon Willison, Swyx, etc.) — thoughtful replies get you noticed. Share code snippets that solve real problems. One good viral tweet can get you 50+ DMs from companies.</p>
+    </div>
+    <div class="card">
+      <h3>Technical Blog (Long-Term)</h3>
+      <p style="margin-top:0.4rem">Start a blog on Substack or a personal site. One post/month minimum. Topics: "How I built X from scratch," "What I learned debugging my RAG system," "Comparing chunking strategies — real benchmarks." Google-indexed blog posts become evergreen recruiting material.</p>
+    </div>
+    <div class="card">
+      <h3>HackerNews Show HN</h3>
+      <p style="margin-top:0.4rem">For your open-source project (P10), post a "Show HN: I built [thing]" post. The HN community is brutal but valuable. Even 50 points = several hundred developers seeing your work. Companies monitor HN for hiring talent. This is elite-level exposure.</p>
+    </div>
+  </div>
+
+  <div class="callout callout-amber" style="margin-top:1.5rem">
+    <strong>The One Sentence Personal Brand Formula</strong>
+    Pick one specific niche and own it. "I build production RAG systems that don't hallucinate." or "I architect multi-agent systems for enterprise automation." or "I'm the engineer who can take an AI prototype and make it production-ready." Specific claims attract specific opportunities. "I'm an AI engineer" attracts nothing.
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ FREELANCE ══════════════════════════════════ -->
+<section id="freelance">
+  <div class="section-eyebrow">Alternative Income</div>
+  <h2>Freelancing & Consulting Strategy</h2>
+  <p class="section-lead">Freelancing from India targeting US/EU clients can generate $50–$120/hr before you even have a full-time offer. It also builds your portfolio and adds real "client" experience to your resume.</p>
+
+  <div class="table-wrap" style="margin-bottom:1.5rem">
+    <table>
+      <thead><tr><th>Platform</th><th>Hourly Range (AI Engineering)</th><th>Barrier to Entry</th><th>Best For</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Toptal</strong></td><td>$80–$200/hr</td><td>Very High (3% acceptance)</td><td>Serious, long-term contracts with top companies. Apply only after Phase 4+.</td></tr>
+        <tr><td><strong>Turing.com</strong></td><td>$40–$100/hr</td><td>Medium (technical screening)</td><td>Full-time remote contract work. Good bridge income while job hunting.</td></tr>
+        <tr><td><strong>Braintrust</strong></td><td>$60–$150/hr</td><td>Medium (portfolio-based)</td><td>Talent-owned platform, higher take-home. Strong for AI engineers.</td></tr>
+        <tr><td><strong>Contra</strong></td><td>$50–$120/hr</td><td>Low (portfolio-based)</td><td>AI/design/product freelancers. Growing fast. Zero platform fees.</td></tr>
+        <tr><td><strong>Upwork</strong></td><td>$25–$80/hr</td><td>Low (competitive)</td><td>Best for building reviews fast. Use for 3 months, then move to premium platforms.</td></tr>
+        <tr><td><strong>Direct Outreach</strong></td><td>$80–$200/hr</td><td>High (requires reputation)</td><td>LinkedIn DM to startup CTOs: "I can build your RAG system in 4 weeks." Best margin.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout callout-green">
+    <strong>The Consulting Pitch That Works</strong>
+    "I build production RAG and AI agent systems for startups. I can take you from prototype to deployed in 6 weeks. I've done this for [reference project]. My rate is $X/hr and I work async-first so your team's timezone doesn't matter." Short, specific, outcome-focused. Send this to 20 startup CTOs on LinkedIn after Phase 4. Expect 3–5 responses.
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ SALARY ══════════════════════════════════ -->
+<section id="salary">
+  <div class="section-eyebrow">Compensation Strategy</div>
+  <h2>Salary Optimization Strategy</h2>
+  <p class="section-lead">You are competing in a global market from India. Here's how to maximize your total compensation at each career stage.</p>
+
+  <div class="salary-tier">
+    <div><h4>Entry-Level (0–1 yr exp, Phase 1–3 completed)</h4><p>Strong portfolio (P01–P05), backend skills, basic RAG, India-based remote</p></div>
+    <div class="sal">$40–65k/yr<span>USD annual</span></div>
+  </div>
+  <div class="salary-tier">
+    <div><h4>Mid-Level (Phase 1–5 completed, 2+ projects deployed)</h4><p>Production RAG + agents, AWS deployment, LLM gateway, evaluations built</p></div>
+    <div class="sal">$65–100k/yr<span>USD annual</span></div>
+  </div>
+  <div class="salary-tier">
+    <div><h4>Senior AI Engineer (All phases + OSS + 2 yrs remote exp)</h4><p>Fine-tuning, full platform built, open-source library, technical writing</p></div>
+    <div class="sal">$100–150k/yr<span>USD annual</span></div>
+  </div>
+  <div class="salary-tier" style="border-color:rgba(245,158,11,0.3)">
+    <div><h4>Principal / Staff AI Engineer (5+ yrs + strong brand)</h4><p>System design leadership, team influence, hiring involvement, public credibility</p></div>
+    <div class="sal" style="color:var(--amber)">$150–220k/yr<span>USD annual + equity</span></div>
+  </div>
+
+  <div class="sep"></div>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>Negotiation Tactics</h3>
+      <ul style="margin-top:0.5rem">
+        <li><strong>Never accept the first offer.</strong> Always ask: "Can you do better on base? I have another offer at X."</li>
+        <li><strong>Create competing offers.</strong> Apply to 5 companies simultaneously. The offer from Company A is leverage at Company B.</li>
+        <li><strong>Ask about equity separately.</strong> "What's the equity package?" — often forgotten by hiring managers, and you can negotiate it independently.</li>
+        <li><strong>Get everything in writing.</strong> Email confirmation of all verbal commitments before signing.</li>
+        <li><strong>Counter 15–20% above offer.</strong> The worst they say is no. Most companies have 10–15% buffer.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>India Tax Optimization</h3>
+      <ul style="margin-top:0.5rem">
+        <li><strong>Invoice as a freelancer/consultant</strong> first (LUT for zero GST) before FTE arrangements</li>
+        <li><strong>Open a foreign currency account</strong> (HDFC RFC, ICICI RFC) to receive USD/EUR directly</li>
+        <li><strong>Section 80C/80D deductions</strong> — max these every year</li>
+        <li><strong>Consider registering as a Private Limited</strong> once income exceeds ₹30L — corporate tax rate is lower than personal income tax at high incomes</li>
+        <li><strong>FEMA compliance:</strong> Declare foreign accounts and income correctly. Non-compliance has severe penalties.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ REMOTE ══════════════════════════════════ -->
+<section id="remote">
+  <div class="section-eyebrow">Job Search System</div>
+  <h2>Remote Job Strategy (India → Global)</h2>
+  <p class="section-lead">Landing a remote US/EU job from India requires a systematic approach. Here are the exact job boards, company lists, and outreach tactics that work in 2026.</p>
+
+  <div class="card-grid" style="margin-bottom:1.5rem">
+    <div class="card">
+      <h3>Best Job Boards for Remote AI Roles</h3>
+      <ul style="margin-top:0.5rem">
+        <li><strong>Wellfound (Angel.co)</strong> — AI startups, remote-friendly filter, direct founder contact</li>
+        <li><strong>Greenhouse / Lever careers pages</strong> — Apply directly, better signal-to-noise than aggregators</li>
+        <li><strong>RemoteOK.com</strong> — Filter by AI/ML/Python/backend</li>
+        <li><strong>HiringCafe</strong> — Aggregator with "remote worldwide" filter</li>
+        <li><strong>LinkedIn Jobs</strong> — Set alert: "AI Engineer" + Remote + Last 24 hours. Apply within 12 hours of posting for highest chance</li>
+        <li><strong>HackerNews "Who Is Hiring"</strong> — Monthly thread, search for "AI" + "remote" + "worldwide"</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Target Company Profiles</h3>
+      <ul style="margin-top:0.5rem">
+        <li><strong>Series A–C AI-first startups</strong> (5–100 employees) — Highest impact, equity upside, fastest career growth</li>
+        <li><strong>Product-led SaaS companies</strong> adding AI features — Need AI engineers who understand product, not researchers</li>
+        <li><strong>Remote-first engineering companies</strong> (Basecamp, GitLab, Automattic model) — Cultural fit for India-based engineers</li>
+        <li><strong>AI developer tools companies</strong> (building for engineers) — Match your skill set perfectly</li>
+        <li><strong>EU companies (Germany, Netherlands, UK)</strong> — Full timezone overlap with IST, increasingly open to India-based talent</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout callout-blue">
+    <strong>The 15-Minute Outreach Template That Gets Replies</strong>
+    Subject: AI engineer interested in [Company] — built similar system<br><br>
+    "Hi [Name], I came across [Company] while working on a similar [RAG/agent] system. I noticed you're solving [specific problem from their blog/product] — I built something comparable at [link]. I'd love a 15-minute call to learn more about the engineering challenges at [Company]. [Your name]"<br><br>
+    Send to engineers who write blog posts or tweet about their work, not to recruiters. Engineers forward good outreach to their hiring manager. Recruiters forward everything to ATS.
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ STANDOUT ══════════════════════════════════ -->
+<section id="standout">
+  <div class="section-eyebrow">Competitive Advantage</div>
+  <h2>How to Stand Out from Average AI Engineers</h2>
+  <p class="section-lead">These are the specific, concrete things that separate top candidates. Each one is actionable. None requires luck.</p>
+
+  <div class="standout-item">
+    <div class="standout-num">01</div>
+    <div><div class="standout-title">Show production thinking, not demo thinking</div><div class="standout-body">Average: "Here's a demo of my RAG chatbot." Elite: "Here's my RAG system with hybrid search, reranking, and an eval harness. It runs at 180ms p95, costs $0.0003/query, and hallucinates 8% less than my baseline prompt-only approach on a 200-question benchmark I built." One sentence with metrics makes you unforgettable.</div></div>
+  </div>
+
+  <div class="standout-item">
+    <div class="standout-num">02</div>
+    <div><div class="standout-title">Build evaluations before anyone asks</div><div class="standout-body">99% of AI engineers have no evals. When you say "I built an eval harness using RAGAS that tests 200 gold-standard question-answer pairs before every deployment," the interviewer's eyes light up. This is product engineering maturity that signals "this person has shipped to production and cares about it working."</div></div>
+  </div>
+
+  <div class="standout-item">
+    <div class="standout-num">03</div>
+    <div><div class="standout-title">Proactively discuss cost and latency in every project</div><div class="standout-body">Senior engineers think about cost. Every project README should state: "average query cost: $X, p95 latency: Xms, monthly infrastructure cost at N requests/day: $X." This signals that you think like an engineer who will be trusted with production budget — not just a developer who makes things work.</div></div>
+  </div>
+
+  <div class="standout-item">
+    <div class="standout-num">04</div>
+    <div><div class="standout-title">Write like a senior engineer</div><div class="standout-body">Your README, your cover letter, and your technical responses should be precise, well-structured, and free of hedging language. "I implemented X using Y because Z, which resulted in W" beats "I tried to make a thing that kind of does X." Communication is a hard skill in remote work. Show it at every touchpoint.</div></div>
+  </div>
+
+  <div class="standout-item">
+    <div class="standout-num">05</div>
+    <div><div class="standout-title">Have a clear opinion on trade-offs</div><div class="standout-body">Average: "I used LangGraph because it's popular." Elite: "I chose LangGraph over a raw Python loop because the project required Postgres checkpointing for conversation persistence across sessions — something that would have taken 3x more code to implement manually. For simpler linear agent workflows, I prefer raw Python for reduced dependencies." Specificity signals depth.</div></div>
+  </div>
+
+  <div class="standout-item">
+    <div class="standout-num">06</div>
+    <div><div class="standout-title">Build in public, consistently</div><div class="standout-body">A LinkedIn post every week for 12 straight weeks about what you're building makes you visible to hundreds of recruiters and engineers. When you finally apply, they've seen your name before. Warm applications convert at 4–8x the rate of cold ones. "Build in public" is not a cliché — it's a compound interest machine for your career.</div></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ MISTAKES ══════════════════════════════════ -->
+<section id="mistakes">
+  <div class="section-eyebrow">Failure Prevention</div>
+  <h2>Mistakes That Cause Rejection</h2>
+  <p class="section-lead">These are the patterns that cause hiring managers to pass on candidates who otherwise have the right skills. Most are easily avoidable.</p>
+
+  <div class="mistake-item">
+    <div class="mistake-num">01</div>
+    <div><div class="mistake-title">Tutorial portfolio — all clones, no original projects</div><div class="mistake-body">If your GitHub has "LangChain-ChatGPT-tutorial-clone" and "rag-starter-project-from-yt," you're immediately in Bucket A. Hiring managers have seen these exact repos 800 times this month. Every project must solve a problem you identified, not replicate a tutorial.</div></div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="mistake-num">02</div>
+    <div><div class="mistake-title">Failing to explain your own code in the interview</div><div class="mistake-body">This is the most common failure in take-home reviews. "I used this library because I saw it in a tutorial" is an instant rejection. For every line of code in your project, you must be able to explain what it does, why you chose it, and what you'd do differently. If you can't, you didn't build it — you copied it.</div></div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="mistake-num">03</div>
+    <div><div class="mistake-title">Generic resume with no quantified outcomes</div><div class="mistake-body">"Developed RAG pipeline for document question-answering" tells a hiring manager nothing. They've read this 500 times today. "Built production RAG pipeline serving 1,200 queries/day at 98.7% uptime, reducing average response time from 4.2s to 0.9s through semantic caching" tells a story. Every bullet needs a number.</div></div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="mistake-num">04</div>
+    <div><div class="mistake-title">Applying to 200 jobs with zero customization</div><div class="mistake-body">Mass applying is a documented waste of time with a 0.3% callback rate. 15–20 targeted, customized applications per week — where you have read the company blog, mentioned something specific, and applied within 24 hours of posting — convert at 5–8%. Targeting > spraying.</div></div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="mistake-num">05</div>
+    <div><div class="mistake-title">No deployed demos</div><div class="mistake-body">Showing a Streamlit app running on your laptop is not a demo. "Here's the GitHub repo, you can run it locally" is not a demo. Every portfolio project must have a live URL or a professional screen recording (Loom, 2 minutes max) that shows it working. No demo = no credibility.</div></div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="mistake-num">06</div>
+    <div><div class="mistake-title">Over-engineering simple solutions in take-homes</div><div class="mistake-body">Take-home: "Build a simple RAG Q&A endpoint." Wrong response: 4 microservices, 3 Docker containers, Kubernetes config, and 1,800 lines of code. Senior engineers value simplicity and correctness over complexity. Build the simplest correct solution, then explicitly say: "This could be extended with X for production use." That comment shows senior judgment.</div></div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="mistake-num">07</div>
+    <div><div class="mistake-title">Inconsistent or non-existent GitHub contributions</div><div class="mistake-body">A GitHub contribution graph with 3 green squares in 12 months tells hiring managers you don't actually code regularly. You need daily commits — even if they're README updates, test additions, or small refactors. Consistency in the graph signals consistency as an engineer. This is one of the fastest things a hiring manager checks.</div></div>
+  </div>
+
+  <div class="mistake-item">
+    <div class="mistake-num">08</div>
+    <div><div class="mistake-title">Not preparing for "Why remote? Why India?"</div><div class="mistake-body">Have a polished, confident answer ready: "I've been working remotely for X years and have developed strong async communication habits — full documentation, proactive status updates, and deliberate overlap hours. I have X hours of overlap with US East / full EU overlap. My work speaks 24/7 via my GitHub and deployed systems." Never apologetic, always confident.</div></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ HIRING MGR ══════════════════════════════════ -->
+<section id="hiringmgr">
+  <div class="section-eyebrow">The Other Side of the Table</div>
+  <h2>What Hiring Managers Actually Look For</h2>
+  <p class="section-lead">After reviewing hundreds of AI engineering candidates, here is exactly what separates candidates who get offers from those who don't — from the hiring manager's perspective.</p>
+
+  <div class="callout callout-amber">
+    <strong>The Single Most Important Signal</strong>
+    "Can this person ship a production AI feature with minimal supervision and maintain it?" Every interview question is trying to answer this. Every portfolio piece should answer this. Frame everything through this lens.
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>🔍 What We Look For in GitHub</h3>
+      <ul style="margin-top:0.5rem">
+        <li>Consistent commits over months (not burst activity before applying)</li>
+        <li>README files that explain the problem, not just the code</li>
+        <li>Evidence of iterating — commits that show improvement</li>
+        <li>Tests existing in the repo</li>
+        <li>Semantic commit messages (not "fix stuff")</li>
+        <li>Projects that look like they were actually used</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🎯 What We Want to Hear in System Design</h3>
+      <ul style="margin-top:0.5rem">
+        <li>"The trade-off I'm making here is X vs Y because..."</li>
+        <li>"The main failure mode in this design is..."</li>
+        <li>"I'd monitor this with X metric, and alert when Y happens"</li>
+        <li>"At 10x scale, this component would bottleneck at..."</li>
+        <li>"For the MVP, I'd simplify this to... then add X later"</li>
+        <li>Proactive discussion of cost, latency, and reliability</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>💬 What We Look For in Communication</h3>
+      <ul style="margin-top:0.5rem">
+        <li>Writes long, structured Slack messages (not one-liners)</li>
+        <li>Documents decisions, not just code</li>
+        <li>Responds to async questions with complete answers</li>
+        <li>Says "I don't know, but here's how I'd find out" not "I don't know"</li>
+        <li>Updates status before being asked</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🚩 What Immediately Causes a Pass</h3>
+      <ul style="margin-top:0.5rem">
+        <li>Can't run their own code locally in the interview</li>
+        <li>Describes every project as "I used LangChain to..."</li>
+        <li>No evals, no metrics, no monitoring in any project</li>
+        <li>Answers "What would you do differently?" with "Nothing, I'm happy with it"</li>
+        <li>Can't explain a single failure they encountered in a project</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ HARD TO REJECT ══════════════════════════════════ -->
+<section id="hardtoreject">
+  <div class="section-eyebrow">The Endgame</div>
+  <h2>How to Become "Hard to Reject"</h2>
+  <p class="section-lead">The goal isn't to be perfect — it's to have so many strong signals that rejecting you feels like a mistake the hiring manager has to justify. Here's the compound effect that creates that position.</p>
+
+  <div class="callout callout-green">
+    <strong>The "Hard to Reject" Checklist</strong>
+    When a hiring manager reviews you, they should be able to check all of these. This is what it means to be in Bucket C.
+  </div>
+
+  <ul class="checklist green" style="margin-bottom:1.5rem">
+    <li>Live deployed project that anyone can use right now</li>
+    <li>GitHub with 5 solid pinned repos and daily commit history</li>
+    <li>LinkedIn with clear, specific positioning and regular posts</li>
+    <li>Can explain every line of code in every project</li>
+    <li>Every project has metrics (latency, cost, accuracy)</li>
+    <li>At least one project has a real eval harness</li>
+    <li>At least one open-source contribution with a merged PR</li>
+    <li>Technical blog post or LinkedIn article that shows depth of understanding</li>
+    <li>Confident, concise narrative: "I build X for Y companies"</li>
+    <li>Can draw a system architecture diagram from memory for each project</li>
+    <li>References available (even informal — GitHub contributors, OSS maintainers)</li>
+    <li>Async communication demonstrated via written portfolio materials</li>
+  </ul>
+
+  <div class="callout callout-amber">
+    <strong>The Pre-Interview GitHub Audit (Do This 48 Hours Before)</strong>
+    Before every technical interview: (1) Clean up README on your top 3 repos — fix any broken links or outdated instructions. (2) Make a small commit to show recent activity. (3) Confirm your live demos are still running. (4) Re-read your own code so you can speak to it fluently. (5) Prepare 3 sentences on what you'd improve in each project — shows engineering maturity.
+  </div>
+
+  <div class="two-col" style="margin-top:1.5rem">
+    <div class="card">
+      <h4>After the First Offer (Leverage Playbook)</h4>
+      <ul>
+        <li>Immediately accelerate all other applications in your pipeline</li>
+        <li>Email every company you've interviewed with: "I have an offer expiring [date]. Is there any way to accelerate your process?"</li>
+        <li>Do not tell Company B the exact number from Company A — say "I have a competing offer in the $X range" (10% higher than actual)</li>
+        <li>Ask every company for their highest possible offer, not their standard one</li>
+        <li>Evaluate total comp: base + equity + benefits, not just base salary</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>After You Land the Role</h4>
+      <ul>
+        <li>Ship something in your first 2 weeks — even small. First impressions in remote work are everything.</li>
+        <li>Over-communicate in the first 90 days. Document everything you learn and build.</li>
+        <li>Continue building in public — your next role gets 30% easier when you have company brand + personal brand</li>
+        <li>Start mentoring 1 person publicly on LinkedIn — it signals seniority</li>
+        <li>Review compensation in 12 months. AI engineering salaries are moving fast. If you're underpaid, you now have leverage with 12 months of production impact.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sep"></div>
+
+  <div style="text-align:center;padding:2rem 0">
+    <div style="font-family:var(--mono);font-size:0.72rem;letter-spacing:0.15em;color:var(--amber);margin-bottom:1rem">FINAL PRINCIPLE</div>
+    <p style="font-family:var(--serif);font-size:1.3rem;font-style:italic;color:var(--text2);max-width:600px;margin:0 auto;line-height:1.7">
+      "Ship production code. Track the metrics. Build in public. Repeat for 24 weeks. The offer comes."
+    </p>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <p>AI Engineer Career Blueprint 2026 · India → Global Remote · Built for execution, not inspiration.</p>
+  <p style="color:var(--text3)">Updated for the 2026 hiring landscape · Optimized for $80k–$180k+ remote roles</p>
+</footer>
+
+<script>
+// ── Scroll progress ──
+window.addEventListener('scroll', () => {
+  const el = document.getElementById('scroll-progress');
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = total > 0 ? window.scrollY / total : 0;
+  el.style.transform = `scaleX(${pct})`;
+});
+
+// ── Active nav link on scroll ──
+const sections = document.querySelectorAll('section[id], div[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+      });
+    }
+  });
+}, { rootMargin: '-20% 0px -75% 0px' });
+
+sections.forEach(s => observer.observe(s));
+
+// ── Hero section special ──
+const heroObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => link.classList.remove('active'));
+      const heroLink = document.querySelector('.nav-link[href="#hero"]');
+      if (heroLink) heroLink.classList.add('active');
+    }
+  });
+}, { threshold: 0.3 });
+
+const heroEl = document.getElementById('hero');
+if (heroEl) heroObserver.observe(heroEl);
+</script>
+</body>
+</html>
